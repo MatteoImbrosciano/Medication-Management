@@ -53,12 +53,11 @@ El hito se completará cuando el inventario se actualice automática y correctam
 
 ## **[M3] Milestone 3: Sistema de notificaciones inteligentes**
 **Objetivo**:  
-Desarrollar un sistema de notificaciones automáticas que avise al usuario cuando un medicamento esté a punto de caducar o cuando las existencias de un medicamento estén por debajo del nivel mínimo configurado. Las notificaciones serán configurables para personalizar los criterios de aviso.
+Desarrollar un sistema de notificaciones automáticas que avise al usuario cuando un medicamento esté a punto de caducar o cuando las existencias de un medicamento estén por debajo del nivel mínimo predeterminado (sin personalización). En esta primera fase, el sistema enviará notificaciones básicas basadas en reglas predefinidas.
 
 **Producto**:  
-- Código para el envío de notificaciones configurables (email, push, SMS) basadas en fechas de caducidad inminentes o existencias bajas.
-- Interfaz para la configuración de los umbrales de notificación, que permita a los usuarios establecer los criterios de alerta según sus necesidades.
-  
+- Código para el envío de notificaciones configurables basadas en fechas de caducidad inminentes o existencias bajas.
+
 **Factibilidad**:  
 El hito se completará cuando el sistema envíe correctamente las notificaciones configurables, basadas en los criterios definidos por el usuario, y será validado a través de pruebas funcionales de envío de notificaciones en eventos críticos (caducidades y existencias).
 
