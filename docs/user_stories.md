@@ -16,5 +16,3 @@ Como responsable de comprar medicamentos para varios miembros de la familia, qui
 ## [HU3] Persona que quiere una visión clara del inventario de medicamentos  
 Como usuario que desea administrar fácilmente mi inventario de medicamentos, necesito una interfaz simple que me permita ver de un vistazo qué medicamentos tengo, cuánto stock tengo y cuándo los compré, para poder realizar un seguimiento de los suministros y planificar mejor. mis futuras compras.
 
-## [HU4] Persona que desea recibir notificaciones de caducidad
-Como usuario que administra mis propios medicamentos, quiero recibir notificaciones cuando un medicamento esté a punto de caducar, para poder planificar con tiempo la compra de un nuevo suministro y asegurarme de tener siempre a mano los medicamentos necesarios.
