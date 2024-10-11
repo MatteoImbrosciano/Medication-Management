@@ -17,7 +17,7 @@ Se considerará factible cuando el código fuente entregado represente correctam
 ---
 
 ## **[M1] Milestone 1: Gestión completa del inventario**
-Implementar un sistema que permita mantener un registro completo del inventario de medicamentos, definiendo niveles mínimos y máximos para cada medicamento y monitoreando fechas de caducidad y uso. El sistema enviará notificaciones automáticas cuando las existencias estén por debajo o por encima de los límites establecidos.
+Entregar un sistema que permita mantener un registro completo del inventario de medicamentos, definiendo niveles mínimos y máximos para cada medicamento y monitoreando fechas de caducidad y uso. El sistema enviará notificaciones automáticas cuando las existencias estén por debajo o por encima de los límites establecidos.
 
 **Producto**:  
 - Código que implemente un registro detallado del inventario, con la posibilidad de agregar, actualizar y visualizar manualmente la información de los medicamentos.
@@ -33,7 +33,7 @@ El hito se considerará completado cuando el sistema permita la gestión y visua
 ---
 
 ## **[M2] Milestone 2: Carga de tickets electrónicos y actualización automática del inventario**
-Crear una funcionalidad que permita a los usuarios cargar tickets electrónicos (como recibos de farmacia) y actualizar automáticamente el inventario de medicamentos con la información extraída. Esta función debe soportar formatos de tickets como PDF y XML.
+Entregar una funcionalidad que permita a los usuarios cargar tickets electrónicos (como recibos de farmacia) y actualizar automáticamente el inventario de medicamentos con la información extraída. Esta función debe soportar formatos de tickets como PDF y XML.
 
 **Producto**:  
 - Sistema que permita la carga y el reconocimiento de tickets electrónicos en diferentes formatos (PDF, XML).
@@ -48,7 +48,7 @@ El hito se completará cuando el inventario se actualice automática y correctam
 ---
 
 ## **[M3] Milestone 3: Sistema de notificaciones inteligentes**
-Desarrollar un sistema de notificaciones automáticas que avise al usuario cuando un medicamento esté a punto de caducar o cuando las existencias de un medicamento estén por debajo del nivel mínimo predeterminado (sin personalización). En esta primera fase, el sistema enviará notificaciones básicas basadas en reglas predefinidas.
+Entregar un sistema de notificaciones automáticas que avise al usuario cuando un medicamento esté a punto de caducar o cuando las existencias de un medicamento estén por debajo del nivel mínimo predeterminado (sin personalización). En esta primera fase, el sistema enviará notificaciones básicas basadas en reglas predefinidas.
 
 **Producto**:  
 - Código para el envío de notificaciones configurables basadas en fechas de caducidad inminentes o existencias bajas.
