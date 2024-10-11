@@ -63,6 +63,5 @@ Desarrollar un sistema de notificaciones automáticas que avise al usuario cuand
 El hito se completará cuando el sistema envíe correctamente las notificaciones configurables, basadas en los criterios definidos por el usuario, y será validado a través de pruebas funcionales de envío de notificaciones en eventos críticos (caducidades y existencias).
 
 **Historias de usuario asociadas**:  
-- [HU3]: Usuario que desea recibir notificaciones personalizadas para gestionar las caducidades y las cantidades de medicamentos de manera oportuna.
-
+- [HU3]: Usuario que desea ser alertado cuando un medicamento esté por caducar.
 ---
