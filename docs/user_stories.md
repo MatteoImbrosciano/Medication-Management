@@ -9,12 +9,12 @@ para poder actualizar automáticamente el inventario de los medicamentos que pos
 
 ## [HU2] Responsable de la compra de medicamentos para varias personas  
 **Como persona encargada de comprar medicamentos**,  
-necesito un sistema que actualice automáticamente el inventario cuando cargo un ticket electrónico,  
-para evitar comprar medicamentos duplicados o olvidar adquirir los que son necesarios.
+Como responsable de comprar medicamentos para varios miembros de la familia, quiero un sistema que me permita actualizar automáticamente el inventario cuando subo un ticket electrónico, para evitar comprar medicamentos duplicados u olvidarme de comprar los necesarios para cada miembro de la familia.
 
 ---
 
 ## [HU3] Persona que quiere una visión clara del inventario de medicamentos  
-**Como usuario que desea gestionar fácilmente su inventario de medicamentos**,  
-necesito una interfaz sencilla que me permita ver de un vistazo qué medicamentos poseo, cuántas existencias tengo y cuándo los compré,  
-para poder hacer un seguimiento de las existencias y planificar mejor mis compras futuras.
+Como usuario que desea administrar fácilmente mi inventario de medicamentos, necesito una interfaz simple que me permita ver de un vistazo qué medicamentos tengo, cuánto stock tengo y cuándo los compré, para poder realizar un seguimiento de los suministros y planificar mejor. mis futuras compras.
+
+## [HU4] Persona que desea recibir notificaciones de caducidad
+Como usuario que administra mis propios medicamentos, quiero recibir notificaciones cuando un medicamento esté a punto de caducar, para poder planificar con tiempo la compra de un nuevo suministro y asegurarme de tener siempre a mano los medicamentos necesarios.
