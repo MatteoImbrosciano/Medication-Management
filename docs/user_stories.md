@@ -14,5 +14,4 @@ Como responsable de comprar medicamentos para varios miembros de la familia, qui
 ---
 
 ## [HU3] Persona que quiere una visión clara del inventario de medicamentos  
-Como usuario que desea administrar fácilmente mi inventario de medicamentos, necesito una interfaz simple que me permita ver de un vistazo qué medicamentos tengo, cuánto stock tengo y cuándo los compré, para poder realizar un seguimiento de los suministros y planificar mejor. mis futuras compras.
-
+Como usuario que quiere administrar fácilmente mi inventario de medicamentos, cuando un producto se agota, tengo que tener cuidado de comprar más para no quedarme sin stock, necesito saber cuánto stock tengo y cuándo compré. para poder realizar un seguimiento de los suministros y planificar mejor mis futuras compras.
