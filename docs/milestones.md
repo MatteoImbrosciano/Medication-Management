@@ -1,7 +1,6 @@
 # Gestión de Medicamentos - Milestones
 
 ## **[M0] Milestone 0: Modelado y planificación del dominio del problema**
-**Objetivo**:  
 Entregar un modelo inicial del dominio que defina claramente las entidades clave y sus relaciones, basado en las historias de usuario. Este modelo incluirá conceptos como medicamentos, tickets electrónicos (PDF, XML) e inventario.
 
 **Producto**:
@@ -18,7 +17,6 @@ Se considerará factible cuando el código fuente entregado represente correctam
 ---
 
 ## **[M1] Milestone 1: Gestión completa del inventario**
-**Objetivo**:  
 Implementar un sistema que permita mantener un registro completo del inventario de medicamentos, definiendo niveles mínimos y máximos para cada medicamento y monitoreando fechas de caducidad y uso. El sistema enviará notificaciones automáticas cuando las existencias estén por debajo o por encima de los límites establecidos.
 
 **Producto**:  
@@ -31,12 +29,10 @@ El hito se considerará completado cuando el sistema permita la gestión y visua
 
 **Historias de usuario asociadas**:  
 - [HU1]: Paciente que desea rastrear sus existencias de medicamentos y recibir alertas en caso de fechas de caducidad.
-- [HU3]: Usuario que quiere una visión clara y organizada de su inventario, incluidas las cantidades y las fechas de caducidad.
 
 ---
 
 ## **[M2] Milestone 2: Carga de tickets electrónicos y actualización automática del inventario**
-**Objetivo**:  
 Crear una funcionalidad que permita a los usuarios cargar tickets electrónicos (como recibos de farmacia) y actualizar automáticamente el inventario de medicamentos con la información extraída. Esta función debe soportar formatos de tickets como PDF y XML.
 
 **Producto**:  
@@ -52,7 +48,6 @@ El hito se completará cuando el inventario se actualice automática y correctam
 ---
 
 ## **[M3] Milestone 3: Sistema de notificaciones inteligentes**
-**Objetivo**:  
 Desarrollar un sistema de notificaciones automáticas que avise al usuario cuando un medicamento esté a punto de caducar o cuando las existencias de un medicamento estén por debajo del nivel mínimo predeterminado (sin personalización). En esta primera fase, el sistema enviará notificaciones básicas basadas en reglas predefinidas.
 
 **Producto**:  
