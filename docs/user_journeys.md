@@ -24,17 +24,3 @@ Es fácil olvidar qué medicamentos ya he comprado, especialmente cuando compro 
 
 ### Objetivo:
 Me gustaría recibir notificaciones automáticas que me avisen cuando un medicamento está a punto de agotarse o es necesario comprar uno nuevo. Esto reduciría los errores y garantizaría que nunca nos quedemos sin los medicamentos necesarios. También me permitiría monitorear fácilmente el inventario sin tener que revisar manualmente cada producto.
-
----
-
-## 3. Antonio
-   65 años, jubilado
-
-### Contexto:
-Debido a mi edad y a mi memoria limitada, gestionar el inventario de medicamentos en casa es muy complicado. Compro medicamentos en momentos diferentes y no siempre recuerdo qué productos ya he comprado o en qué cantidad los tengo.
-
-### Problema:
-Me resulta difícil recordar qué medicamentos tengo en casa, cuándo los compré y cuántos me quedan disponibles. Sin un sistema que me ayude, podría olvidar comprar un medicamento esencial o confundirme con las cantidades, lo que podría hacer que me quede sin lo que necesito.
-
-### Objetivo:
-Me gustaría tener una aplicación que me muestre de manera clara e intuitiva qué medicamentos tengo disponibles, con la cantidad actual y la fecha de compra. De esta manera, podría gestionar fácilmente mi inventario sin depender de mi memoria.
