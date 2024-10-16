@@ -3,24 +3,10 @@
 ## 1. Laura
    32 años, paciente
 
-### Contexto:
-Cada vez que compro medicamentos, recibo un ticket electrónico que contiene detalles como el nombre del medicamento, la cantidad y el precio. Actualmente, debo transcribir manualmente esta información en una lista para actualizar el inventario de los medicamentos que tengo en casa.
-
-### Problema:
-Transcribir manualmente los datos es un proceso propenso a errores, requiere mucho tiempo y puede hacer que olvide qué medicamentos ya he comprado. Esto puede causar la compra de medicamentos duplicados o el riesgo de quedarme sin los medicamentos necesarios.
-
-### Objetivo:
-Me gustaría poder cargar el ticket electrónico directamente en la aplicación, para que la información se extraiga automáticamente y el inventario se actualice sin mi intervención manual. De esta manera, puedo evitar comprar medicamentos que ya tengo y mantener el control sobre las existencias actuales.
+Cada vez que compra medicamentos, recibe un ticket electrónico que contiene detalles como el nombre del medicamento, la cantidad y el precio. Actualmente, debe transcribir manualmente esta información en una lista para actualizar el inventario de los medicamentos que tiene en casa. Este proceso es propenso a errores, requiere mucho tiempo y puede hacer que olvide qué medicamentos ya ha comprado, lo que provoca compras duplicadas o el riesgo de quedarse sin los medicamentos necesarios. Laura necesita poder cargar el ticket electrónico directamente en la aplicación, de modo que la información se extraiga automáticamente y el inventario se actualice sin intervención manual, evitando compras innecesarias y permitiéndole mantener el control sobre las existencias.
 
 ---
 
 ## 2. Persona responsable de la compra de medicamentos
 
-### Contexto:
-Soy responsable de la compra de medicamentos para varias personas, a menudo familiares, y debo llevar un registro de un inventario variado de medicamentos, gestionando cantidades y tiempos de compra. Cada compra va acompañada de un ticket electrónico que registro manualmente para evitar adquisiciones duplicadas.
-
-### Problema:
-Es fácil olvidar qué medicamentos ya he comprado, especialmente cuando compro para varias personas. Además, gestionar manualmente múltiples existencias es complicado y no siempre logro monitorear eficazmente cuándo se están agotando, lo que provoca compras redundantes.
-
-### Objetivo:
-Me gustaría recibir notificaciones automáticas que me avisen cuando un medicamento está a punto de agotarse o es necesario comprar uno nuevo. Esto reduciría los errores y garantizaría que nunca nos quedemos sin los medicamentos necesarios. También me permitiría monitorear fácilmente el inventario sin tener que revisar manualmente cada producto.
+Esta persona está a cargo de comprar medicamentos para varias personas, como familiares, y debe gestionar un inventario variado de medicamentos, controlando cantidades y tiempos de compra. Cada compra va acompañada de un ticket electrónico que debe registrar manualmente para evitar adquisiciones duplicadas. Es fácil olvidar qué medicamentos ya se han comprado, especialmente cuando se gestionan existencias para varias personas. Además, monitorear manualmente múltiples existencias resulta complicado y no siempre se logra vigilar eficazmente cuándo se están agotando los medicamentos, lo que provoca compras redundantes o el riesgo de quedarse sin ellos. Esta persona necesita recibir notificaciones automáticas que avisen cuando un medicamento está a punto de agotarse o es necesario comprar uno nuevo. Esto ayudaría a evitar errores y garantizar que nunca falten los medicamentos necesarios, facilitando la gestión del inventario sin la necesidad de revisarlo manualmente.
