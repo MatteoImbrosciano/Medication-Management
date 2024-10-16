@@ -1,17 +1,27 @@
 # Historias de usuario
 
-## [HU1] Paciente que compra medicamentos  
-**Como paciente que compra regularmente medicamentos para sí misma**,  
-necesito una forma de cargar fácilmente los tickets electrónicos que recibo de la farmacia,  
-para poder actualizar automáticamente el inventario de los medicamentos que poseo, evitando transcribir manualmente los detalles y comprar medicamentos que ya tengo en casa.
+## [HU1] Paciente que desea ingresar manualmente sus medicamentos  
+**Como paciente que compra medicamentos regularmente**,  
+necesito un sistema que me permita ingresar manualmente los medicamentos que compro en la farmacia,  
+para poder registrar fácilmente las cantidades y las fechas de compra y llevar un seguimiento básico de mi inventario.
 
 ---
 
-## [HU2] Responsable de la compra de medicamentos para varias personas  
-**Como persona encargada de comprar medicamentos**,  
-Como responsable de comprar medicamentos para varios miembros de la familia, quiero un sistema que me permita actualizar automáticamente el inventario cuando subo un ticket electrónico, para evitar comprar medicamentos duplicados u olvidarme de comprar los necesarios para cada miembro de la familia.
+## [HU2] Persona que quiere visualizar su inventario de medicamentos  
+**Como usuario que desea tener una visión clara de sus medicamentos**,  
+necesito una funcionalidad que me permita ver el inventario completo de los medicamentos que tengo,  
+para poder monitorear las cantidades y las fechas de compra, asegurándome de tener un control preciso de mis existencias.
 
 ---
 
-## [HU3] Persona que quiere una visión clara del inventario de medicamentos  
-Como usuario que quiere administrar fácilmente mi inventario de medicamentos, cuando un producto se agota, tengo que tener cuidado de comprar más para no quedarme sin stock, necesito saber cuánto stock tengo y cuándo compré. para poder realizar un seguimiento de los suministros y planificar mejor mis futuras compras.
+## [HU3] Usuario que necesita recibir alertas de existencias bajas  
+**Como usuario que depende de medicamentos importantes**,  
+necesito recibir notificaciones automáticas cuando las existencias de un medicamento bajen de un nivel predefinido,  
+para poder reponer mis medicamentos a tiempo y no quedarme sin los que son esenciales para mi salud.
+
+---
+
+## [HU4] Paciente que desea actualizar su inventario automáticamente desde tickets electrónicos  
+**Como paciente que compra regularmente medicamentos**,  
+necesito que el sistema extraiga automáticamente los datos de los tickets electrónicos que recibo de la farmacia,  
+para que no tenga que ingresar manualmente los medicamentos y el inventario se actualice de manera automática con las cantidades correctas.
