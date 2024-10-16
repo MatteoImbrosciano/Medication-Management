@@ -7,6 +7,7 @@ Cada vez que compra medicamentos, recibe un ticket electrónico que contiene det
 
 ---
 
-## 2. Persona responsable de la compra de medicamentos
+## 2. Marco
+   48 años
 
 Esta persona está a cargo de comprar medicamentos para varias personas, como familiares, y debe gestionar un inventario variado de medicamentos, controlando cantidades y tiempos de compra. Cada compra va acompañada de un ticket electrónico que debe registrar manualmente para evitar adquisiciones duplicadas. Es fácil olvidar qué medicamentos ya se han comprado, especialmente cuando se gestionan existencias para varias personas. Además, monitorear manualmente múltiples existencias resulta complicado y no siempre se logra vigilar eficazmente cuándo se están agotando los medicamentos, lo que provoca compras redundantes o el riesgo de quedarse sin ellos. Esta persona necesita recibir notificaciones automáticas que avisen cuando un medicamento está a punto de agotarse o es necesario comprar uno nuevo. Esto ayudaría a evitar errores y garantizar que nunca falten los medicamentos necesarios, facilitando la gestión del inventario sin la necesidad de revisarlo manualmente.
