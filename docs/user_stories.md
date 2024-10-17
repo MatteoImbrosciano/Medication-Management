@@ -2,12 +2,11 @@
 
 ## [HU1] Paziente che acquista medicinali  
 **Come di paziente che acquista regolarmente farmaci per se stessa**,  
-Ho bisogno di un modo per caricare facilmente le ricevute elettroniche che ricevo dalla farmacia,  
-poter aggiornare automaticamente l'inventario dei farmaci che ho, evitando di trascrivere manualmente i dati e acquistare i farmaci che ho già a casa.
-
+ho bisogno di un sistema che mi permetta di inserire manualmente i medicinali nell'inventario,
+per poter tenere traccia delle mie scorte e sapere sempre quali medicinali ho in casa.
 ---
 
-## [HU2] Responsabile dell'acquisto di farmaci per più persone  
-**In qualità di responsabile dell'acquisto dei farmaci**,  
-Ho bisogno di un sistema che aggiorni automaticamente l'inventario quando carico un biglietto elettronico,  
-per evitare di acquistare farmaci duplicati o di dimenticare di acquistare quelli necessari.
+## [HU2] Paziente che vuole aggiornare automaticamente l'inventario dai ticket elettronici
+**Come paziente che riceve ticket elettronici dalla farmacia**,  
+ho bisogno di un sistema che carichi automaticamente i dati dai ticket elettronici,
+in modo da aggiornare l'inventario dei medicinali senza dover inserire manualmente i dettagli.
