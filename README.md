@@ -21,3 +21,8 @@ La documentación completa del proyecto se encuentra en la carpeta [Documentaci�
 
 Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 
+## Planificación del proyecto
+
+- [User Stories](./docs/user_stories.md).
+- [User Journeys](./docs/user_journeys.md).
+- [Milestones](./docs/milestones.md).
