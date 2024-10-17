@@ -1,27 +1,17 @@
 # Historias de usuario
 
-## [HU1] Paciente que desea ingresar manualmente sus medicamentos  
-**Como paciente que compra medicamentos regularmente**,  
-necesito un sistema que me permita ingresar manualmente los medicamentos que compro en la farmacia,  
-para poder registrar fácilmente las cantidades y las fechas de compra y llevar un seguimiento básico de mi inventario.
+## [HU1] Automatización del Inventario de Medicamentos
+
+Soy Laura y necesito comprar medicamentos periódicamente para mí y mi familia. Cada vez que voy a la farmacia, recibo un recibo electrónico que incluye los detalles de los medicamentos comprados, como el nombre del medicamento, la cantidad y la fecha de compra. Actualmente, debo transcribir manualmente toda esta información en una lista para hacer un seguimiento de los medicamentos que ya tengo en casa y de las cantidades disponibles. Este proceso consume mucho tiempo y es propenso a errores. Me gustaría tener un sistema que me permita actualizar automáticamente mi inventario de medicamentos para tener siempre una visión clara de las existencias y saber cuándo debo comprar nuevos medicamentos.
 
 ---
 
-## [HU2] Persona que quiere visualizar su inventario de medicamentos  
-**Como usuario que desea tener una visión clara de sus medicamentos**,  
-necesito una funcionalidad que me permita ver el inventario completo de los medicamentos que tengo,  
-para poder monitorear las cantidades y las fechas de compra, asegurándome de tener un control preciso de mis existencias.
+## [HU2] Gestión de Medicamentos para Familiares
+
+Soy la persona responsable de las compras para mis padres mayores, que viven lejos de mí. A menudo tengo que encargarme de ordenar y controlar los medicamentos que deben tomar, asegurándome de que tengan todo lo que necesitan sin duplicaciones ni olvidos. Cuando hago las compras, recibo un recibo electrónico con los detalles de los medicamentos. Actualmente, para gestionar mejor las existencias de sus medicamentos, debo transferir manualmente los datos de cada compra a una hoja de cálculo que gestiono yo mismo. Me gustaría automatizar este proceso para mantener actualizado automáticamente el inventario de medicamentos y asegurarme de que no falte nada.
 
 ---
 
-## [HU3] Usuario que necesita recibir alertas de existencias bajas  
-**Como usuario que depende de medicamentos importantes**,  
-necesito recibir notificaciones automáticas cuando las existencias de un medicamento bajen de un nivel predefinido,  
-para poder reponer mis medicamentos a tiempo y no quedarme sin los que son esenciales para mi salud.
-
----
-
-## [HU4] Paciente que desea actualizar su inventario automáticamente desde tickets electrónicos  
-**Como paciente que compra regularmente medicamentos**,  
-necesito que el sistema extraiga automáticamente los datos de los tickets electrónicos que recibo de la farmacia,  
-para que no tenga que ingresar manualmente los medicamentos y el inventario se actualice de manera automática con las cantidades correctas.
+## [HU3] Notificaciones sobre Medicamentos en Escasez o Próximos a Caducar
+  
+Soy Antonio, un hombre de 65 años, y tengo que gestionar regularmente los medicamentos que tomo. Debido a mi edad, a veces me confundo y no recuerdo cuántos medicamentos he comprado o cuáles están por caducar. Me gustaría un sistema que me avise automáticamente cuando las existencias de un medicamento estén por agotarse o cuando uno esté próximo a caducar, para evitar quedarme sin los medicamentos necesarios o usar productos caducados.
