@@ -1,38 +1,24 @@
 # Gestión de Medicamentos - Milestones
 
 ## **[M0] Milestone 0: Estructura del problema**
-En este paso fundamental se delinea la arquitectura general del sistema, identificando las entidades principales como medicamentos, inventario y usuarios, pero sin entrar en relaciones ni detalles complejos. El objetivo es proporcionar un prototipo mínimo que permita sentar las bases para el desarrollo futuro. En esta fase se deberá establecer una estructura sencilla y funcional que se irá ampliando en etapas posteriores.
 
-El milestone será completado cuando el código represente correctamente el problema, en base a la información recopilada en las historias de usuario antes mencionadas.
+Analizar las historias de usuario para identificar y codificar los elementos del dominio problemático relacionados con la gestión de medicamentos y recibos electrónicos. En esta fase, el sistema permitirá la creación manual de medicamentos y del inventario, proporcionando una base para las fases siguientes y se deberá establecer una código que represente el modelo de gestión de medicamentos, permitiendo agregar manualmente medicamentos al inventario.
 
-**Historias de usuario asociadas**:  
-- [HU1]
+El milestone se considera completo cuando el sistema permite la gestión manual de medicamentos y existencias, con una interfaz que permita visualizar la información de manera clara y organizada.
 
 ---
 
-## **[M1] Milestone 1: Gestión esencial del inventario**
-crear un sistema de gestión del inventario funcional, aunque básico. El sistema permitirá visualizar los medicamentos insertados manualmente y monitorizar las cantidades. Todavía no habrá una integración automática para la adquisición de datos, pero el usuario podrá consultar y actualizar la información de manera manual.
+**[M1] Milestone 1: Gestión del inventario**
 
-**Historias de usuario asociadas**:  
-- [HU2]
+Implementar una funcionalidad que permita actualizar automáticamente el inventario de medicamentos cargando los recibos electrónicos. Esto reducirá el error humano y facilitará la gestión de las existencias de medicamentos. 
+Deberá entregar código fuente que permita la carga y procesamiento automático de recibos electrónicos (PDF o XML), actualizando el inventario con datos extraídos de los tickets.
+
+El milestone será completado cuando el sistema cargue con éxito los recibos electrónicos, extrayendo la información de los medicamentos y actualizando correctamente el inventario.
 
 ---
 
-## **[M2] Milestone 2: Sistema de notificaciones**
+**[M2] Milestone 2: Sistema de notificaciones**
+
 El sistema comenzará a admitir funciones básicas de notificación. Esta fase introduce notificaciones simples que avisan al usuario cuando las existencias de un medicamento caen por debajo de un umbral predefinido, gestionado manualmente por el usuario.
 
 El milestone se considerará completado cuando el sistema envíe correctamente notificaciones basadas en reglas predefinidas (como fecha de caducidad o nivel mínimo de existencias).
-
-**Historias de usuario asociadas**:  
-- [HU3]
-
----
-
-## **[M3] Milestone 3: Inserción automática**
-En este punto, el sistema mejora con la adición de una funcionalidad de inserción automática de medicamentos a través de tickets electrónicos(PDF). Esta versión será sencilla, limitándose a extraer los datos clave (nombre, cantidad, fecha de compra) de los tickets proporcionados por el usuario e insertarlos automáticamente en el inventario.
-
-El milestone se considerará completado cuando el sistema permita gestionar automáticamente las existencias y enviar notificaciones basadas en los niveles mínimos y las fechas de caducidad.
-
-**Historias de usuario asociadas**:  
-- [HU4]
----
