@@ -1,13 +1,22 @@
-# User Journeys
-
-## 1. Laura
-   32 años, paciente
-
-Cada vez que compra medicamentos, recibe un ticket electrónico que contiene detalles como el nombre del medicamento, la cantidad y el precio. Actualmente, debe transcribir manualmente esta información en una lista para actualizar el inventario de los medicamentos que tiene en casa. Este proceso es propenso a errores, requiere mucho tiempo y puede hacer que olvide qué medicamentos ya ha comprado, lo que provoca compras duplicadas o el riesgo de quedarse sin los medicamentos necesarios. Laura necesita poder cargar el ticket electrónico directamente en la aplicación, de modo que la información se extraiga automáticamente y el inventario se actualice sin intervención manual, evitando compras innecesarias y permitiéndole mantener el control sobre las existencias.
+# Viaje del usuario
 
 ---
 
-## 2. Marco
-   48 años
+## Laura
 
-Esta persona está a cargo de comprar medicamentos para varias personas, como familiares, y debe gestionar un inventario variado de medicamentos, controlando cantidades y tiempos de compra. Cada compra va acompañada de un ticket electrónico que debe registrar manualmente para evitar adquisiciones duplicadas. Es fácil olvidar qué medicamentos ya se han comprado, especialmente cuando se gestionan existencias para varias personas. Además, monitorear manualmente múltiples existencias resulta complicado y no siempre se logra vigilar eficazmente cuándo se están agotando los medicamentos, lo que provoca compras redundantes o el riesgo de quedarse sin ellos. Esta persona necesita recibir notificaciones automáticas que avisen cuando un medicamento está a punto de agotarse o es necesario comprar uno nuevo. Esto ayudaría a evitar errores y garantizar que nunca falten los medicamentos necesarios, facilitando la gestión del inventario sin la necesidad de revisarlo manualmente.
+32 años,
+
+Cuando compro medicamentos para mí o para mi familia, a menudo pierdo la cuenta de lo que ya he comprado y termino comprando medicamentos innecesarios. Esto resulta en un desperdicio de dinero y en el riesgo de tener medicamentos caducados que no llegamos a usar a tiempo. Me gustaría un sistema que me permita gestionar automáticamente mi inventario de medicamentos, actualizándolo automáticamente cada vez que compro algo en la farmacia.
+
+---
+
+## Responsable de las compras para los padres
+
+Viviendo lejos de mis padres, es difícil gestionar sus medicamentos. Me preocupa que se queden sin medicamentos esenciales o que compren medicamentos de forma incorrecta. Me gustaría tener una manera de monitorear automáticamente sus existencias y recibir alertas cuando sea necesario volver a comprar algo o cuando los medicamentos estén por caducar.
+
+---
+
+## Antonio
+
+Es un hombre de 65 años,
+A veces me confundo y olvido cuántos medicamentos tengo en casa. También tengo problemas para recordar cuándo caducan los medicamentos. Me gustaría un sistema que me avise automáticamente cuando deba comprar nuevos medicamentos o cuando los que tengo estén por caducar, para no correr el riesgo de usar medicamentos caducados o quedarme sin los que son importantes.
