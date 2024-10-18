@@ -6,9 +6,9 @@
 
 32 años,
 
-Quando compro farmaci, spesso perdo traccia di ciò che ho già acquistato e finisco per acquistare farmaci non necessari. Ciò si traduce in uno spreco di denaro e nel rischio di avere farmaci scaduti che non utilizziamo in tempo. Vorrei un sistema che mi permetta di gestire e visionare il mio inventario dei farmaci.
+Cuando compro medicamentos, a menudo pierdo el control de lo que ya he comprado y termino comprando medicamentos innecesarios. Esto se traduce en un desperdicio de dinero y en el riesgo de tener medicamentos caducados que no utilizamos a tiempo. Me gustaría un sistema que me permitiera gestionar y visualizar mi inventario de medicamentos.
 
 ## Antonio
 
-È un uomo di 65 anni,
-A volte mi confondo e dimentico quanti farmaci ho a casa. Ho anche difficoltà a ricordare quando scadono i farmaci. Vorrei un sistema che mi avvisi automaticamente quando devo acquistare nuovi farmaci o quando quelli che ho stanno per scadere, per non correre il rischio di utilizzare farmaci scaduti o di rimanere senza quelli importanti.
+Es un hombre de 65 años,
+A veces me confundo y olvido cuántos medicamentos tengo en casa. También tengo dificultades para recordar cuándo caducan los medicamentos. Me gustaría un sistema que me avise automáticamente cuando deba comprar nuevos medicamentos o cuando los que tengo estén a punto de caducar, para no correr el riesgo de usar medicamentos caducados o quedarme sin los importantes.
