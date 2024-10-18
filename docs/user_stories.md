@@ -1,12 +1,15 @@
 # User Story
 
-## [HU1] Paziente che acquista medicinali  
-**Come di paziente che acquista regolarmente farmaci per se stessa**,  
-ho bisogno di un sistema che mi permetta di inserire manualmente i medicinali nell'inventario,
-per poter tenere traccia delle mie scorte e sapere sempre quali medicinali ho in casa.
+## [HU1] Paciente que compra medicamentos  
+**Como paciente que compra regularmente medicamentos para sí misma**,  
+necesito un sistema que me permita insertar manualmente los medicamentos en el inventario,  
+para poder llevar un seguimiento de mis existencias y saber siempre qué medicamentos tengo en casa.
+
+
 ---
 
-## [HU2] Paziente che vuole aggiornare automaticamente l'inventario dai ticket elettronici
-**Come paziente che riceve ticket elettronici dalla farmacia**,  
-ho bisogno di un sistema che carichi automaticamente i dati dai ticket elettronici,
-in modo da aggiornare l'inventario dei medicinali senza dover inserire manualmente i dettagli.
+## [HU2] Paciente que quiere actualizar automáticamente el inventario desde los tickets electrónicos  
+**Como paciente que recibe tickets electrónicos de la farmacia**,  
+necesito un sistema que cargue automáticamente los datos de los tickets electrónicos,  
+de modo que el inventario de medicamentos se actualice sin tener que insertar manualmente los detalles.
+
