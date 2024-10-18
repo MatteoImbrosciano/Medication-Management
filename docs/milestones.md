@@ -2,8 +2,8 @@
 
 ## **[M0] Milestone 0: Estructura del problema**
 
-È necessario fornire un sistema iniziale che rappresenti la base del problema, basato sulle storie degli utenti **HU1** e **HU2**. Questo modello includerà le entità chiave e le loro relazioni necessarie per lo sviluppo del prodotto minimo vitale (MVP). Il modello verrà consegnato sotto forma di codice funzionale.
-Il traguardo sarà completato quando il codice rappresenterà correttamente la base problematica.
+Es necesario proporcionar un sistema inicial que represente la base del problema, basado en las historias de usuario **HU1** y **HU2**. Este modelo incluirá las entidades clave y sus relaciones necesarias para el desarrollo del producto mínimo viable (MVP). El modelo será entregado en forma de código funcional.  
+El objetivo se considerará alcanzado cuando el código represente correctamente la base del problema.
 
 - **HUs asociadas**: [HU1], [HU2]
   
@@ -11,7 +11,8 @@ Il traguardo sarà completato quando il codice rappresenterà correttamente la b
 
 **[M1] Milestone 1: Gestione del inventario**
 
-È necessario sviluppare un sistema che permetta all'utente di visualizzare e gestire l'inventario dei medicinali. Il sistema dovrà fornire una panoramica chiara e in tempo reale dei medicinali disponibili, consentendo all'utente di sapere sempre quali medicinali possiede, in la quantità. Questo permetterà di evitare acquisti duplicati e assicurarsi di non rimanere senza farmaci essenziali. In questo milestone, l'utente potrà inserire, modificare e rimuovere i medicinali dal sistema, oltre a poter visualizzare le quantità e i dettagli come la scadenza.
+Es necesario desarrollar un sistema que permita al usuario visualizar y gestionar el inventario de medicamentos. El sistema deberá proporcionar una vista clara y en tiempo real de los medicamentos disponibles, permitiendo al usuario saber siempre qué medicamentos posee y en qué cantidad. Esto permitirá evitar compras duplicadas y asegurarse de no quedarse sin medicamentos esenciales. 
+En este hito, el usuario podrá insertar, modificar y eliminar medicamentos del sistema, además de poder visualizar las cantidades y los detalles como la fecha de caducidad.
 
 - **HUs asociadas**: [HU1]
   
