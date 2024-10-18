@@ -15,12 +15,4 @@ Il traguardo sarà completato quando il codice rappresenterà correttamente la b
 
 - **HUs asociadas**: [HU1]
   
----
-
-**[M2] Milestone 2: Integrazione dei tickets electrónicos**
-
-È necessario prevedere una funzionalità che permetta di caricare i biglietti elettronici (in cloud) in formato PDF o XML e di aggiornare automaticamente l'inventario con le informazioni estratte dai ticket. Ciò eliminerà la necessità di trascrivere manualmente i dati dei farmaci.
-Il traguardo sarà completato quando il sistema garantirà che il sistema sia fruibile dagli utenti in qualsiasi momento, eliminando la necessità di gestire localmente i file PDF o XML contenenti i dettagli dei medicinali
-
-- **HUs asociadas**: [HU2]
   
