@@ -4,3 +4,4 @@ class Ticket:
     
     def __init__(self):
         self.medicamentos = []
+        self.fecha = None
