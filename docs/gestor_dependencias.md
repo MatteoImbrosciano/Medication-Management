@@ -7,3 +7,4 @@ Poetry es una herramienta moderna que permite definir todas las dependencias en 
 Otra ventaja de Poetry es su capacidad para gestionar automáticamente entornos virtuales y asegurar que todos los colaboradores utilicen la misma versión de Python, en este caso, 3.9, como se especifica en pyproject.toml.
 
 Por estas razones, Poetry es la opción más recomendable para este proyecto, ya que facilita el control de versiones, la instalación de dependencias y el mantenimiento a largo plazo.
+
