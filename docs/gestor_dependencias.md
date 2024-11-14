@@ -1,10 +1,14 @@
-# Gestor Dependencias
+# Gestor de Dependencias
 
-Según la documentación oficial de Python, la gestión de dependencias se realiza comúnmente con herramientas como pip y archivos requirements.txt. Sin embargo, en este proyecto hemos optado por Poetry como gestor de dependencias.
+En el proyecto de gestión de medicamentos en Python, hemos elegido **Poetry** como gestor de dependencias, una herramienta moderna y ampliamente utilizada en la comunidad de Python. A continuación se explican las razones por las que Poetry es la opción más adecuada para este proyecto:
 
-Poetry es una herramienta moderna que permite definir todas las dependencias en un único archivo, pyproject.toml, que además incluye información sobre el proyecto como la versión de Python requerida, el nombre del proyecto y el autor. Esto simplifica la gestión de dependencias y elimina la necesidad de herramientas adicionales.
+Poetry utiliza el estándar `pyproject.toml` para gestionar tanto las dependencias como la configuración del proyecto, permitiendo una estructura centralizada y organizada. Esto facilita su integración con otras herramientas y entornos de desarrollo modernos en Python.
 
-Otra ventaja de Poetry es su capacidad para gestionar automáticamente entornos virtuales y asegurar que todos los colaboradores utilicen la misma versión de Python, en este caso, 3.9, como se especifica en pyproject.toml.
+Poetry genera automáticamente un archivo `poetry.lock`, lo que garantiza que las versiones de las dependencias se mantengan consistentes en distintos entornos. Este archivo de bloqueo ayuda a prevenir conflictos y asegura que el proyecto funcione correctamente en cada configuración.
 
-Por estas razones, Poetry es la opción más recomendable para este proyecto, ya que facilita el control de versiones, la instalación de dependencias y el mantenimiento a largo plazo.
+Poetry facilita la creación y administración de entornos virtuales específicos para cada proyecto, proporcionando una separación clara entre proyectos y una instalación más segura y ordenada de las dependencias.
 
+Con comandos como `poetry add` y `poetry update`, Poetry permite instalar y actualizar dependencias de manera sencilla, asegurando que las versiones sean siempre compatibles con el proyecto.
+
+### Comparación con otras herramientas
+Aunque existen otras herramientas que también usan `pyproject.toml`, como **PDM** y **Hatch**, **Poetry** destaca por su popularidad y su conjunto completo de funciones para manejar tanto dependencias como entornos virtuales de forma intuitiva y eficiente.
