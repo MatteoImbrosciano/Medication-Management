@@ -27,3 +27,16 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [User Journeys](./docs/user_journeys.md).
 - [Milestones](./docs/milestones.md).
 - [Gestor Dependencias](./docs/gestor_dependencias.md).
+- [Gestor Tareas](./docs/gestor_tareas.md).
+  - Si no está instalado: curl -sSL https://install.python-poetry.org | python3 -
+  - poetry install
+  - poetry check
+  - poetry run format_code
+  - poetry run check_syntax
+  - poetry run check_style
+  - poetry run clean
+  - poetry run test
+  - poetry run build
+  - Con poetry run full corregimos la sintaxis
+  - poetry run clean-full
+
