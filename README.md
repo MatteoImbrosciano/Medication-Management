@@ -39,4 +39,3 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
   - poetry run build
   - Con poetry run full corregimos la sintaxis
   - poetry run clean-full
-
