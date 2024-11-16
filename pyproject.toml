@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 name = "medication_management"
 version = "0.1.0"
 description = "Sistema de gestión de medicamentos - Poetry"
-authors = ["Matteo Imbrosciano <tuemail@example.com>"]
+authors = ["Matteo Imbrosciano matteo.imbrosciano16@gmail.com>"]
 license = { text = "GPL-3.0-or-later" }
 
 readme = "README.md"
