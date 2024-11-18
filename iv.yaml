@@ -3,7 +3,4 @@ entidad: medication_management/inventario.py
 automatizar:
   fichero: "pyproject.toml"
   orden: "poetry"
-  tareas:
-    - install: "Instala todas las dependencias."
-    - check: "Verifica la sintaxis y el estilo de código."
-    - test: "Ejecuta las pruebas con pytest."
+  
