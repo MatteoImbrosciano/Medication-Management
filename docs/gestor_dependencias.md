@@ -70,3 +70,4 @@ Basándonos en los criterios definidos, **Poetry** es la herramienta seleccionad
 ## Conclusión
 
 La elección de Poetry no solo responde a las necesidades técnicas del proyecto. Cada herramienta fue evaluada con criterios claros, asegurando que la decisión final no fuera arbitraria ni influenciada por patrones genéricos. Este enfoque garantiza que el sistema de gestión de medicamentos contará con una base estable y eficiente, facilitando tanto el desarrollo como el mantenimiento a largo plazo.
+
