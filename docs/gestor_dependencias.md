@@ -27,35 +27,33 @@ Las herramientas consideradas para este proyecto fueron **PDM**, **Hatch**, **Po
 
 ## Cómo se cumplen los criterios
 
-### **1. Compatibilidad con estándares modernos**
-Poetry, PDM y Hatch soportan completamente el formato `pyproject.toml`, cumpliendo con los estándares definidos en los PEP 517 y 518.
+### **1. Automatización de tareas repetitivas**
+- **Poetry:** Permite definir y ejecutar tareas personalizadas directamente desde el archivo `pyproject.toml`, como `poetry run pytest` para pruebas y `poetry run flake8` para verificar estilo.
+- **Hatch:** Ofrece funcionalidades similares mediante su sistema modular, pero requiere configuraciones adicionales para tareas avanzadas.
+- **PDM:** No incluye una funcionalidad integrada para la automatización de tareas, lo que exige el uso de herramientas externas.
 
-### **2. Gestión de versiones consistente**
-Todas las herramientas analizadas (Poetry, PDM, Hatch) generan un archivo de bloqueo (`lock file`) que asegura la coherencia de las dependencias entre entornos.
+### **2. Compatibilidad con estándares modernos**
+- Todas las herramientas evaluadas soportan `pyproject.toml` y cumplen con los estándares definidos en los PEP 517 y 518.
 
-### **3. Facilidad de uso**
-- **Poetry:** Destaca por comandos simples como `poetry add` y `poetry update`, facilitando la gestión.
-- **Hatch:** Su enfoque modular puede ser más complejo para proyectos pequeños.
-- **PDM:** Tiene una curva de aprendizaje mayor debido al PEP 582, pero sigue siendo accesible.
+### **3. Facilidad para proyectos colaborativos**
+- **Poetry:** Automatiza la gestión de entornos virtuales, asegurando que todos los desarrolladores trabajen en condiciones consistentes.
+- **Hatch:** No automatiza la creación de entornos virtuales, lo que requiere configuraciones manuales adicionales.
+- **PDM:** Usa directorios locales en lugar de entornos virtuales tradicionales, lo que puede generar confusión en equipos grandes.
+
+### **4. Soporte y mantenimiento a largo plazo**
+- **Poetry:** Es ampliamente adoptada en la comunidad Python, con actualizaciones regulares y una documentación extensa.
+- **Hatch:** Aunque es prometedora, tiene una comunidad más pequeña y menos recursos disponibles.
+- **PDM:** Su adopción es limitada y su comunidad aún está en crecimiento.
 
 ---
 
 ## Análisis Comparativo
 
-Se evaluaron tres herramientas principales para la gestión de dependencias en Python: **PDM**, **Hatch** y **Poetry**. A continuación, se presenta un análisis narrativo de cada una.
+Se evaluaron tres herramientas principales para la gestión de dependencias en Python: **PDM**, **Hatch** y **Poetry**. A continuación, se presenta un resumen de su análisis:
 
-### Evaluación de PDM
-
-**PDM** utiliza pyproject.toml y sigue el PEP 582. Simplifica la gestión de dependencias eliminando los entornos virtuales tradicionales, usando directorios locales. Ofrece un archivo de bloqueo (pdm.lock) para garantizar consistencia, pero su enfoque puede ser poco intuitivo y tiene una comunidad pequeña con adopción limitada.
-
-### Evaluación de Hatch
-
-**Hatch** compatible con pyproject.toml y soporta archivos de bloqueo (hatch.lock). Es versátil y modular, ideal para proyectos complejos gracias a los plugins. Sin embargo, no automatiza la creación de entornos virtuales y su popularidad aún es limitada, lo que dificulta su adopción en proyectos más simples.
-### Evaluación de Poetry
-
-**Poetry** es una herramienta madura y ampliamente reconocida en la comunidad Python. Es totalmente compatible con `pyproject.toml` y cumple con los estándares definidos en los PEP 517 y PEP 518. Uno de sus mayores beneficios es la capacidad de automatizar completamente la creación y gestión de entornos virtuales, lo que reduce la complejidad de la configuración inicial y garantiza una separación clara entre proyectos.
-
-Poetry compatible con los estándares PEP 517 y 518, automatiza completamente la gestión de entornos virtuales y asegura consistencia con poetry.lock. Su interfaz es intuitiva, con comandos simples (poetry add, poetry update), y cuenta con una comunidad sólida y amplia documentación. Es una opción madura y confiable para proyectos de cualquier escala.
+- **PDM:** Innovador al eliminar los entornos virtuales tradicionales mediante el uso de directorios locales. Sin embargo, su falta de automatización de tareas y comunidad limitada lo hacen menos adecuado para este proyecto.
+- **Hatch:** Versátil y modular, ideal para proyectos complejos gracias a su soporte de plugins. No obstante, la falta de automatización de entornos virtuales y su adopción limitada dificultan su uso en proyectos colaborativos.
+- **Poetry:** Herramienta madura, con automatización integral de entornos virtuales y tareas repetitivas. Su interfaz intuitiva y comunidad sólida la convierten en la opción más confiable para este proyecto.
 
 ---
 
