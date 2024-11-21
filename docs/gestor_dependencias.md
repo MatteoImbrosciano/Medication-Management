@@ -1,29 +1,42 @@
 # Gestión de Dependencias
 
-En el desarrollo del sistema de gestión de medicamentos en Python, la elección de una herramienta adecuada para la gestión de dependencias es crucial. Este sistema requiere un entorno estable, reproducible y eficiente, que permita a los desarrolladores trabajar de manera coordinada y minimizar los errores relacionados con versiones inconsistentes de las librerías. Para ello, hemos evaluado tres herramientas modernas que cumplen con los estándares actuales de Python: **PDM**, **Hatch** y **Poetry**.
+En el desarrollo del sistema de gestión de medicamentos en Python, la elección de una herramienta adecuada para la gestión de dependencias es crucial. Este sistema requiere un entorno estable, reproducible y eficiente, que permita a los desarrolladores trabajar de manera coordinada y minimizar los errores relacionados con versiones inconsistentes de las librerías. 
 
-El análisis se basó en criterios claros previamente definidos, adaptados a las necesidades específicas del proyecto. Este enfoque asegura una decisión informada y justificada, evitando soluciones arbitrarias o generalizadas.
+---
+
+## Metodología de Selección
+
+Para identificar las herramientas más adecuadas, se siguieron estos pasos:
+
+1. **Definición de criterios:** Basados en las necesidades del proyecto, se establecieron requisitos claros (ver criterios más abajo).
+2. **Investigación inicial:** Se consultaron fuentes oficiales de Python, documentación de herramientas y discusiones en foros técnicos.
+3. **Filtrado:** Entre las opciones disponibles, se priorizaron aquellas compatibles con los estándares actuales (`pyproject.toml`) y ampliamente utilizadas en la comunidad Python.
+4. **Criterio de exclusión:** Se descartaron herramientas que no ofrecieran automatización o soporte sólido para entornos virtuales.
+
+Las herramientas consideradas para este proyecto fueron **PDM**, **Hatch**, **Poetry** y **Makefile** (como alternativa generalista para la automatización).
 
 ---
 
 ## Criterios de Selección
 
-Para identificar la herramienta más adecuada, se definieron los siguientes criterios de selección:
+1. **Compatibilidad con estándares modernos de Python:** El formato `pyproject.toml` debe ser soportado.
+2. **Gestión de versiones consistente:** La herramienta debe ofrecer un archivo de bloqueo para garantizar entornos reproducibles.
+3. **Facilidad de uso:** Los comandos deben ser intuitivos y fáciles de adoptar por el equipo.
 
-1. **Compatibilidad con estándares modernos de Python:** 
-   La herramienta debe ser compatible con el formato `pyproject.toml`, conforme a los PEP 517 y PEP 518, garantizando que la configuración del proyecto siga las mejores prácticas actuales.
+---
 
-2. **Gestión de versiones consistente:** 
-   Es indispensable que el gestor ofrezca un mecanismo para bloquear versiones de dependencias mediante un archivo de bloqueo, asegurando que los entornos de desarrollo y producción sean idénticos.
+## Cómo se cumplen los criterios
 
-3. **Facilidad de uso:** 
-   La herramienta debe ser accesible, con una curva de aprendizaje reducida, para facilitar su adopción por parte del equipo.
+### **1. Compatibilidad con estándares modernos**
+Poetry, PDM y Hatch soportan completamente el formato `pyproject.toml`, cumpliendo con los estándares definidos en los PEP 517 y 518.
 
-4. **Soporte para entornos virtuales:** 
-   Es fundamental que permita la creación y administración de entornos virtuales de forma automática, mejorando la organización y la separación entre proyectos.
+### **2. Gestión de versiones consistente**
+Todas las herramientas analizadas (Poetry, PDM, Hatch) generan un archivo de bloqueo (`lock file`) que asegura la coherencia de las dependencias entre entornos.
 
-5. **Popularidad y soporte de la comunidad:** 
-   La herramienta debe contar con una comunidad activa, actualizaciones frecuentes y una documentación extensa, lo que reduce riesgos técnicos y asegura soporte a largo plazo.
+### **3. Facilidad de uso**
+- **Poetry:** Destaca por comandos simples como `poetry add` y `poetry update`, facilitando la gestión.
+- **Hatch:** Su enfoque modular puede ser más complejo para proyectos pequeños.
+- **PDM:** Tiene una curva de aprendizaje mayor debido al PEP 582, pero sigue siendo accesible.
 
 ---
 
@@ -33,25 +46,29 @@ Se evaluaron tres herramientas principales para la gestión de dependencias en P
 
 ### Evaluación de PDM
 
-**PDM** es una herramienta moderna que utiliza el formato `pyproject.toml` y sigue el estándar PEP 582, lo que la alinea con las prácticas actuales de Python. Su enfoque principal es simplificar la gestión de dependencias eliminando la necesidad de entornos virtuales tradicionales, al usar directorios locales para instalar librerías. Aunque este enfoque es innovador, puede resultar poco intuitivo para desarrolladores que estén acostumbrados a métodos más convencionales.
-
-PDM incluye un archivo de bloqueo (`pdm.lock`) para garantizar la consistencia de versiones, lo cual es esencial para el desarrollo colaborativo. Sin embargo, su comunidad aún está en crecimiento y su adopción es limitada en comparación con otras herramientas más consolidadas como Poetry. Esto puede suponer un desafío en términos de soporte y recursos disponibles.
+**PDM** utiliza pyproject.toml y sigue el PEP 582. Simplifica la gestión de dependencias eliminando los entornos virtuales tradicionales, usando directorios locales. Ofrece un archivo de bloqueo (pdm.lock) para garantizar consistencia, pero su enfoque puede ser poco intuitivo y tiene una comunidad pequeña con adopción limitada.
 
 ### Evaluación de Hatch
 
-**Hatch** se presenta como una solución versátil para la gestión moderna de proyectos Python. Además de ser compatible con `pyproject.toml`, Hatch ofrece un sistema de bloqueo de versiones (`hatch.lock`) que asegura consistencia entre entornos. Su diseño modular y extensible permite personalizar su funcionalidad mediante el uso de plugins, lo que la convierte en una herramienta poderosa para proyectos más complejos.
-
-No obstante, Hatch no automatiza la creación de entornos virtuales, lo que requiere configuraciones adicionales y pasos manuales por parte del desarrollador. Aunque su comunidad está creciendo, sigue siendo una herramienta relativamente nueva, con menor popularidad en comparación con Poetry. Esto puede limitar su aplicabilidad para proyectos que requieran simplicidad y rapidez de adopción.
-
+**Hatch** compatible con pyproject.toml y soporta archivos de bloqueo (hatch.lock). Es versátil y modular, ideal para proyectos complejos gracias a los plugins. Sin embargo, no automatiza la creación de entornos virtuales y su popularidad aún es limitada, lo que dificulta su adopción en proyectos más simples.
 ### Evaluación de Poetry
 
 **Poetry** es una herramienta madura y ampliamente reconocida en la comunidad Python. Es totalmente compatible con `pyproject.toml` y cumple con los estándares definidos en los PEP 517 y PEP 518. Uno de sus mayores beneficios es la capacidad de automatizar completamente la creación y gestión de entornos virtuales, lo que reduce la complejidad de la configuración inicial y garantiza una separación clara entre proyectos.
 
-Poetry también genera automáticamente un archivo de bloqueo (`poetry.lock`), asegurando que las dependencias sean consistentes en todos los entornos. Su interfaz intuitiva y comandos simples, como `poetry add` y `poetry update`, facilitan su uso incluso para desarrolladores con poca experiencia. Además, la herramienta cuenta con una comunidad activa y extensa documentación, lo que la convierte en una opción confiable y sostenible a largo plazo.
+Poetry compatible con los estándares PEP 517 y 518, automatiza completamente la gestión de entornos virtuales y asegura consistencia con poetry.lock. Su interfaz es intuitiva, con comandos simples (poetry add, poetry update), y cuenta con una comunidad sólida y amplia documentación. Es una opción madura y confiable para proyectos de cualquier escala.
+
+---
+
+## Elección Final
+
+Basándonos en los criterios definidos, **Poetry** es la herramienta seleccionada para la gestión de dependencias. Esta decisión se debe a:
+
+1. Su compatibilidad total con los estándares actuales (`pyproject.toml`).
+2. Su capacidad para gestionar versiones de manera consistente mediante el archivo `poetry.lock`.
+3. La facilidad de uso y comandos claros, que simplifican la adopción.
 
 ---
 
 ## Conclusión
 
-La elección de Poetry no solo responde a las necesidades técnicas del proyecto, sino que también se basa en un análisis detallado y específico. Cada herramienta fue evaluada con criterios claros, asegurando que la decisión final no fuera arbitraria ni influenciada por patrones genéricos. Este enfoque garantiza que el sistema de gestión de medicamentos contará con una base estable y eficiente, facilitando tanto el desarrollo como el mantenimiento a largo plazo.
-
+La elección de Poetry no solo responde a las necesidades técnicas del proyecto. Cada herramienta fue evaluada con criterios claros, asegurando que la decisión final no fuera arbitraria ni influenciada por patrones genéricos. Este enfoque garantiza que el sistema de gestión de medicamentos contará con una base estable y eficiente, facilitando tanto el desarrollo como el mantenimiento a largo plazo.
