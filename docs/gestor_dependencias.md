@@ -1,29 +1,20 @@
 # Gestore di Dipendenze: Poetry
 
-## Motivazioni della Scelta
-
-Abbiamo scelto **Poetry** come gestore di dipendenze per il nostro progetto basandoci sui seguenti criteri:
-
-1. **Aderenza agli standard del linguaggio:**
-   - Poetry utilizza il formato `pyproject.toml`, standardizzato dal PEP 518. Questo garantisce la compatibilità con le migliori pratiche moderne di Python.
-   - Strumenti come **PDM** e **Poethepoet** supportano anch'essi questo formato, ma Poetry offre una gestione delle dipendenze più completa.
-
-2. **Funzionalità principali:**
-   - Risoluzione automatica delle dipendenze e gestione avanzata dei conflitti.
-   - Isolamento degli ambienti virtuali specifici per ogni progetto.
-   - Capacità di creare pacchetti Python pronti per la distribuzione.
-
-3. **Debito tecnico ridotto:**
-   - Poetry è attivamente mantenuto dalla comunità Python, riducendo il rischio di dover migrare a strumenti alternativi in futuro.
-   - Strumenti come **Pipenv** non ricevono aggiornamenti frequenti, aumentando il rischio di obsolescenza.
-
-4. **Facilità d'uso:**
-   - Comandi semplici e una documentazione chiara rendono Poetry facile da adottare sia per sviluppatori esperti che per principianti.
+## Criteri
+1. **Aderenza agli Standard del Linguaggio:**
+   - Il gestore deve supportare il formato `pyproject.toml` (PEP 518) per garantire compatibilità e interoperabilità con altri strumenti.
+2. **Funzionalità Principali:**
+   - Risoluzione automatica dei conflitti, isolamento degli ambienti virtuali e gestione separata delle dipendenze di sviluppo e produzione.
+3. **Facilità d'Uso e Documentazione:**
+   - Deve avere comandi intuitivi e una documentazione chiara per facilitare l'apprendimento e l'adozione.
+4. **Riduzione del Debito Tecnico:**
+   - Deve essere attivamente sviluppato e mantenuto, per evitare problemi di obsolescenza.
+5. **Adattabilità al Progetto:**
+   - Deve adattarsi alle esigenze specifiche del progetto, considerando il numero di dipendenze e la complessità generale.
 
 ---
 
-## Confronto con altri strumenti
-
+## Strumenti
 | **Strumento**       | **Pro**                                                                                     | **Contro**                                                                                  |
 |----------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | **Poetry**           | - Supporto completo a `pyproject.toml`<br>- Gestione avanzata delle dipendenze<br>- Attivamente mantenuto | - Leggermente più lento rispetto a strumenti minimalisti come **PDM**                      |
@@ -33,8 +24,15 @@ Abbiamo scelto **Poetry** come gestore di dipendenze per il nostro progetto basa
 
 ---
 
-## Utilizzo di Poetry nel Progetto
+## Scelta
+Abbiamo scelto **Poetry** come gestore di dipendenze per i seguenti motivi:
+1. **Standard Moderni:** Aderisce al formato `pyproject.toml` (PEP 518), garantendo compatibilità con altri strumenti.
+2. **Gestione Completa:** Offre una gestione avanzata delle dipendenze, inclusi ambienti virtuali e risoluzione automatica dei conflitti.
+3. **Facilità d'Uso:** Comandi semplici e una documentazione chiara lo rendono ideale sia per sviluppatori esperti che per principianti.
+4. **Manutenzione Attiva:** È attivamente sviluppato e mantenuto dalla comunità Python.
+5. **Supporto per Dipendenze Separate:** Permette di gestire separatamente dipendenze di sviluppo e produzione, essenziale per il nostro progetto.
 
-### Conclusione
+---
 
-Poetry è stato scelto per la sua robustezza, compatibilità con gli standard e facilità d'uso. È lo strumento ideale per la gestione delle dipendenze nel nostro progetto, garantendo affidabilità e scalabilità a lungo termine.
+## Conclusione
+Poetry è stato scelto per la sua robustezza, compatibilità con gli standard moderni e facilità d'uso. È lo strumento ideale per la gestione delle dipendenze nel nostro progetto, garantendo affidabilità e scalabilità a lungo termine.
