@@ -1,23 +1,20 @@
-## Motivazioni della Scelta
+# Gestore di Tereas: 
 
-Per l'automazione delle attività nel progetto, abbiamo scelto di utilizzare i **task integrati di Poetry** combinati con un file YAML per definire e organizzare i task principali. La scelta è basata sui seguenti criteri:
-
+## Criteri
 1. **Compatibilità con il Gestore di Dipendenze:**
-   - Poetry offre supporto nativo per task comuni come installazione delle dipendenze e esecuzione di test, riducendo la necessità di strumenti aggiuntivi.
-
-2. **Automazione semplice:**
-   - YAML è leggibile e facilmente modificabile, permettendo di definire attività come il controllo della sintassi e l'esecuzione dei test in modo chiaro.
-
-3. **Leggibilità e manutenibilità:**
-   - La struttura YAML è più leggibile rispetto a configurazioni più complesse, come quelle necessarie con strumenti come **UV** o **Makefile**.
-
-4. **Debito tecnico ridotto:**
-   - Utilizzando un unico strumento per la gestione delle dipendenze e delle attività, semplifichiamo il flusso di lavoro del progetto, riducendo il rischio di configurazioni incoerenti.
+   - Il gestore di task deve integrarsi direttamente con il gestore di dipendenze scelto, evitando la necessità di strumenti aggiuntivi.
+2. **Automazione delle Attività Comuni:**
+   - Deve permettere di automatizzare task come installazione delle dipendenze, esecuzione di test e controllo della sintassi.
+3. **Leggibilità e Manutenibilità:**
+   - La configurazione deve essere chiara, leggibile e facilmente modificabile.
+4. **Flessibilità:**
+   - Deve consentire di aggiungere nuovi task o aggiornare quelli esistenti senza complicazioni.
+5. **Debito Tecnico Ridotto:**
+   - Lo strumento deve essere attivamente mantenuto e ben documentato per garantire stabilità e affidabilità nel tempo.
 
 ---
 
-## Confronto con altri Task Runner
-
+## Strumenti
 | **Strumento**        | **Pro**                                                                                     | **Contro**                                                                                  |
 |-----------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | **Poetry Tasks**      | - Integrato con il gestore di dipendenze<br>- Semplice da configurare                       | - Meno flessibile rispetto a strumenti dedicati                                             |
@@ -25,6 +22,15 @@ Per l'automazione delle attività nel progetto, abbiamo scelto di utilizzare i *
 | **Poethepoet**        | - Ottimo per automazione complessa<br>- Integrazione nativa con YAML                        | - Complesso da configurare per progetti semplici                                           |
 | **Makefile**          | - Standard de facto per task automation<br>- Supporto universale                           | - Richiede una configurazione più manuale                                                  |
 | **UV**                | - Minimalista e flessibile<br>- Ottimo per piccoli progetti                                | - Richiede configurazioni manuali per task e dipendenze                                     |
+
+---
+
+## Scelta
+Abbiamo scelto di utilizzare **Poetry Tasks** combinato con un file YAML per i seguenti motivi:
+1. **Compatibilità:** Si integra perfettamente con il gestore di dipendenze scelto (Poetry), evitando configurazioni aggiuntive.
+2. **Automazione Semplice:** Supporta le attività essenziali (installazione, test, controllo della sintassi) senza richiedere strumenti esterni.
+3. **Leggibilità:** La struttura YAML garantisce una configurazione chiara e facilmente manutenibile.
+4. **Debito Tecnico Ridotto:** Poetry Tasks è parte di un ecosistema attivamente mantenuto e moderno, riducendo il rischio di obsolescenza.
 
 ---
 
