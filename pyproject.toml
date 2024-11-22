@@ -16,14 +16,13 @@ requires-python = ">=3.9"
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^5.0.0"   # Analisi del codice
-black = "^23.0.0"   # Formattazione del codice
+black = "^23.0.0"   # Formattazione e controllo del codice
 pytest = "^7.0.0"   # Test
 
-# Attività di analisi del codice con flake8 (non solo sintassi)
+# Controllo della sintassi con black
 [tasks.lint]
-command = "flake8"
-args = ["--max-line-length=88"]
+command = "black"
+args = ["--check", "--line-length", "88"]
 
 # Controllo dello stile del codice con black
 [tasks.check_style]
@@ -54,5 +53,6 @@ args = ["env", "remove", "python"]
 [tasks.full]
 dependencies = ["lint", "check_style", "build", "test"]
 
+# Pulizia completa
 [tasks.clean-full]
 dependencies = ["clean", "full"]
