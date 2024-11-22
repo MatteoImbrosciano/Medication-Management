@@ -1,73 +1,40 @@
-# Gestión de Dependencias
+# Gestore di Dipendenze: Poetry
 
-En el desarrollo del sistema de gestión de medicamentos en Python, la elección de una herramienta adecuada para la gestión de dependencias es crucial. Este sistema requiere un entorno estable, reproducible y eficiente, que permita a los desarrolladores trabajar de manera coordinada y minimizar los errores relacionados con versiones inconsistentes de las librerías. 
+## Motivazioni della Scelta
 
----
+Abbiamo scelto **Poetry** come gestore di dipendenze per il nostro progetto basandoci sui seguenti criteri:
 
-## Metodología de Selección
+1. **Aderenza agli standard del linguaggio:**
+   - Poetry utilizza il formato `pyproject.toml`, standardizzato dal PEP 518. Questo garantisce la compatibilità con le migliori pratiche moderne di Python.
+   - Strumenti come **PDM** e **Poethepoet** supportano anch'essi questo formato, ma Poetry offre una gestione delle dipendenze più completa.
 
-Para identificar las herramientas más adecuadas, se siguieron estos pasos:
+2. **Funzionalità principali:**
+   - Risoluzione automatica delle dipendenze e gestione avanzata dei conflitti.
+   - Isolamento degli ambienti virtuali specifici per ogni progetto.
+   - Capacità di creare pacchetti Python pronti per la distribuzione.
 
-1. **Definición de criterios:** Basados en las necesidades del proyecto, se establecieron requisitos claros (ver criterios más abajo).
-2. **Investigación inicial:** Se consultaron fuentes oficiales de Python, documentación de herramientas y discusiones en foros técnicos.
-3. **Filtrado:** Entre las opciones disponibles, se priorizaron aquellas compatibles con los estándares actuales (`pyproject.toml`) y ampliamente utilizadas en la comunidad Python.
-4. **Criterio de exclusión:** Se descartaron herramientas que no ofrecieran automatización o soporte sólido para entornos virtuales.
+3. **Debito tecnico ridotto:**
+   - Poetry è attivamente mantenuto dalla comunità Python, riducendo il rischio di dover migrare a strumenti alternativi in futuro.
+   - Strumenti come **Pipenv** non ricevono aggiornamenti frequenti, aumentando il rischio di obsolescenza.
 
-Las herramientas consideradas para este proyecto fueron **PDM**, **Hatch**, **Poetry** y **Makefile** (como alternativa generalista para la automatización).
-
----
-
-## Criterios de Selección
-
-1. **Compatibilidad con estándares modernos de Python:** El formato `pyproject.toml` debe ser soportado.
-2. **Gestión de versiones consistente:** La herramienta debe ofrecer un archivo de bloqueo para garantizar entornos reproducibles.
-3. **Facilidad de uso:** Los comandos deben ser intuitivos y fáciles de adoptar por el equipo.
+4. **Facilità d'uso:**
+   - Comandi semplici e una documentazione chiara rendono Poetry facile da adottare sia per sviluppatori esperti che per principianti.
 
 ---
 
-## Cómo se cumplen los criterios
+## Confronto con altri strumenti
 
-### **1. Automatización de tareas repetitivas**
-- **Poetry:** Permite definir y ejecutar tareas personalizadas directamente desde el archivo `pyproject.toml`, como `poetry run pytest` para pruebas y `poetry run flake8` para verificar estilo.
-- **Hatch:** Ofrece funcionalidades similares mediante su sistema modular, pero requiere configuraciones adicionales para tareas avanzadas.
-- **PDM:** No incluye una funcionalidad integrada para la automatización de tareas, lo que exige el uso de herramientas externas.
-
-### **2. Compatibilidad con estándares modernos**
-- Todas las herramientas evaluadas soportan `pyproject.toml` y cumplen con los estándares definidos en los PEP 517 y 518.
-
-### **3. Facilidad para proyectos colaborativos**
-- **Poetry:** Automatiza la gestión de entornos virtuales, asegurando que todos los desarrolladores trabajen en condiciones consistentes.
-- **Hatch:** No automatiza la creación de entornos virtuales, lo que requiere configuraciones manuales adicionales.
-- **PDM:** Usa directorios locales en lugar de entornos virtuales tradicionales, lo que puede generar confusión en equipos grandes.
-
-### **4. Soporte y mantenimiento a largo plazo**
-- **Poetry:** Es ampliamente adoptada en la comunidad Python, con actualizaciones regulares y una documentación extensa.
-- **Hatch:** Aunque es prometedora, tiene una comunidad más pequeña y menos recursos disponibles.
-- **PDM:** Su adopción es limitada y su comunidad aún está en crecimiento.
+| **Strumento**       | **Pro**                                                                                     | **Contro**                                                                                  |
+|----------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Poetry**           | - Supporto completo a `pyproject.toml`<br>- Gestione avanzata delle dipendenze<br>- Attivamente mantenuto | - Leggermente più lento rispetto a strumenti minimalisti come **PDM**                      |
+| **PDM**              | - Leggero e veloce<br>- Integrazione perfetta con `pyproject.toml`                          | - Meno documentato rispetto a **Poetry**<br>- Funzionalità limitate                        |
+| **Pipenv**           | - Interfaccia user-friendly<br>- Supporta nativamente `Pipfile`                            | - Non compatibile con `pyproject.toml` direttamente<br>- Aggiornamenti poco frequenti      |
+| **Poethepoet**       | - Integrazione nativa con `pyproject.toml`<br>- Ottimo per automazione avanzata             | - Configurazione più complessa per progetti semplici                                       |
 
 ---
 
-## Análisis Comparativo
+## Utilizzo di Poetry nel Progetto
 
-Se evaluaron tres herramientas principales para la gestión de dependencias en Python: **PDM**, **Hatch** y **Poetry**. A continuación, se presenta un resumen de su análisis:
+### Conclusione
 
-- **PDM:** Innovador al eliminar los entornos virtuales tradicionales mediante el uso de directorios locales. Sin embargo, su falta de automatización de tareas y comunidad limitada lo hacen menos adecuado para este proyecto.
-- **Hatch:** Versátil y modular, ideal para proyectos complejos gracias a su soporte de plugins. No obstante, la falta de automatización de entornos virtuales y su adopción limitada dificultan su uso en proyectos colaborativos.
-- **Poetry:** Herramienta madura, con automatización integral de entornos virtuales y tareas repetitivas. Su interfaz intuitiva y comunidad sólida la convierten en la opción más confiable para este proyecto.
-
----
-
-## Elección Final
-
-Basándonos en los criterios definidos, **Poetry** es la herramienta seleccionada para la gestión de dependencias. Esta decisión se debe a:
-
-1. Su compatibilidad total con los estándares actuales (`pyproject.toml`).
-2. Su capacidad para gestionar versiones de manera consistente mediante el archivo `poetry.lock`.
-3. La facilidad de uso y comandos claros, que simplifican la adopción.
-
----
-
-## Conclusión
-
-La elección de Poetry no solo responde a las necesidades técnicas del proyecto. Cada herramienta fue evaluada con criterios claros, asegurando que la decisión final no fuera arbitraria ni influenciada por patrones genéricos. Este enfoque garantiza que el sistema de gestión de medicamentos contará con una base estable y eficiente, facilitando tanto el desarrollo como el mantenimiento a largo plazo.
-
+Poetry è stato scelto per la sua robustezza, compatibilità con gli standard e facilità d'uso. È lo strumento ideale per la gestione delle dipendenze nel nostro progetto, garantendo affidabilità e scalabilità a lungo termine.
