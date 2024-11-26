@@ -1,9 +1,3 @@
-
----
-
-### **File: Gestore di Tareas.md**
-
-```markdown
 # Gestore di Tareas
 
 ## Criteri di selezione
