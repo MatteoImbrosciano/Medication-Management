@@ -1,58 +1,17 @@
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.poetry]
 name = "medication_management"
 version = "0.1.0"
-description = "Sistema de gestión de medicamentos - Poetry"
+description = "Sistema di gestione dei medicinali"
 authors = ["Matteo Imbrosciano <matteo.imbrosciano16@gmail.com>"]
-license = { text = "GPL-3.0-or-later" }
-
+license = "GPL-3.0-or-later"
 readme = "README.md"
-requires-python = ">=3.9"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pytest = "^7.0"
 
 [tool.poetry.dev-dependencies]
-black = "^23.0.0"   # Formattazione e controllo del codice
-pytest = "^7.0.0"   # Test
-
-# Controllo della sintassi con black
-[tasks.lint]
-command = "black"
-args = ["--check", "--line-length", "88"]
-
-# Controllo dello stile del codice con black
-[tasks.check_style]
-command = "black"
-args = ["--check", "--line-length", "88"]
-
-# Formattazione automatica con black
-[tasks.format_code]
-command = "black"
-args = ["--line-length", "88"]
-
-# Esecuzione dei test con pytest
-[tasks.test]
-command = "pytest"
-args = ["--maxfail=5", "--disable-warnings", "--tb=short"]
-
-# Build del progetto
-[tasks.build]
-command = "poetry"
-args = ["build"]
-
-# Pulizia degli ambienti
-[tasks.clean]
-command = "poetry"
-args = ["env", "remove", "python"]
-
-# Esecuzione completa
-[tasks.full]
-dependencies = ["lint", "check_style", "build", "test"]
-
-# Pulizia completa
-[tasks.clean-full]
-dependencies = ["clean", "full"]
