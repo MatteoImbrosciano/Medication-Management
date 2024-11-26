@@ -30,4 +30,4 @@ Per scegliere il gestore di tareas, abbiamo considerato i seguenti criteri:
 - **Contro:** Non ampiamente diffuso.
 
 ## Scelta del migliore
-Abbiamo scelto **Make** per la gestione delle tareas, grazie alla sua flessibilità e ampia portabilità. Tuttavia, Poethepoet potrebbe essere una scelta interessante in un progetto più compatto, dato che consente di unire dipendenze e tareas in un unico file.
+Abbiamo scelto **Make** per la gestione delle tareas, grazie alla sua flessibilità e ampia portabilità.
