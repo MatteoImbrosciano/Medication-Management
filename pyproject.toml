@@ -24,5 +24,3 @@ poethepoet = "^0.31.1"
 [tool.poe.tasks]
 install = "poetry install"
 check = "python -m py_compile medication_management/*.py"
-format = "black ."
-clean = "cmd /c \"del /s /q *.pyc & for /d %i in (__pycache__) do rmdir /s /q %i\""
