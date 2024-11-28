@@ -15,3 +15,14 @@ python = "^3.9"
 pytest = "^7.0"
 
 [tool.poetry.dev-dependencies]
+black = "^23.7.0"
+poethepoet = "^0.15.0"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.31.1"
+
+[tool.poe.tasks]
+install = "poetry install"
+check = "python -m py_compile medication_management/*.py"
+format = "black ."
+clean = "cmd /c \"del /s /q *.pyc & for /d %i in (__pycache__) do rmdir /s /q %i\""
