@@ -29,5 +29,23 @@ Per scegliere il gestore di tareas, abbiamo considerato i seguenti criteri:
   - Definizione di tareas direttamente in un unico file di configurazione.
 - **Contro:** Non ampiamente diffuso.
 
+### 4. **`Nox`**
+- **Descrizione**: Uno strumento Python per automatizzare tareas di testing e ambienti virtuali.
+- **Pro**:
+  - Ideale per gestire attività legate ai test.
+  - Eccellente supporto per configurazioni multi-ambiente.
+- **Contro**:
+  - Non progettato per tareas generiche; il focus è sui test.
+  - Meno flessibile per tareas non legate al testing.
+
+### 5. **`Taskipy`**
+- **Descrizione**: Un task runner minimalista basato su Python, progettato per l'uso con `pyproject.toml`.
+- **Pro**:
+  - Semplice e leggero.
+  - Supporto diretto per `pyproject.toml`.
+- **Contro**:
+  - Funzionalità limitate rispetto a Poethepoet.
+  - Documentazione meno approfondita.
+
 ## Scelta del migliore
-Abbiamo scelto **Make** per la gestione delle tareas, grazie alla sua flessibilità e ampia portabilità.
+Abbiamo scelto **`Poethepoet`** per la gestione delle tareas, grazie alla sua flessibilità e ampia portabilità.
