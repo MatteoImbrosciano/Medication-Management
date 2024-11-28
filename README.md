@@ -28,6 +28,3 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [Milestones](./docs/milestones.md).
 - [Gestor Dependencias](./docs/gestor_dependencias.md).
 - [Gestor Tareas](./docs/gestor_tareas.md).
-  - Si no está instalado: curl -sSL https://install.python-poetry.org | python3 -
-  - poetry install
-  - poetry check
