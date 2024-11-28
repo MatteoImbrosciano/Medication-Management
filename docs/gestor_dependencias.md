@@ -30,6 +30,15 @@ Per scegliere il gestore di dipendenze, abbiamo considerato i seguenti criteri:
   - Molto leggero.
 - **Contro:** Ancora meno utilizzato rispetto a Poetry.
 
+### 4. **`Hatch`**
+- **Descrizione**: Un gestore di dipendenze moderno con focus sulla gestione di ambienti virtuali e configurazioni avanzate.
+- **Pro**:
+  - Supporto per configurazioni avanzate e multi-environment.
+  - Perfetto per progetti complessi e modulari.
+- **Contro**:
+  - Community più piccola rispetto a Poetry e Pipenv.
+  - Più complesso da configurare per piccoli progetti.
+
 ## Scelta del migliore
 Abbiamo scelto **Poetry** per la gestione delle dipendenze, grazie alla sua compatibilità con `pyproject.toml`, facilità d’uso e manutenzione attiva.
 
