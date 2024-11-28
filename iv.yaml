@@ -2,5 +2,5 @@ lenguaje: python
 entidad: medication_management/inventario.py
 automatizar:
   fichero: pyproject.toml
-  orden: "poetry run poe check"
+  orden: "poe check"
   
