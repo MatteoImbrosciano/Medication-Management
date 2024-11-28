@@ -1,1 +1,0 @@
-import os, py_compile; [print(f"✔ Sintassi OK: {os.path.join(root, file)}") if py_compile.compile(os.path.join(root, file), doraise=True) else None for root, _, files in os.walk(".") for file in files if file.endswith(".py")]
