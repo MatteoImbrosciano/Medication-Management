@@ -6,5 +6,6 @@ automatizar:
   orden: "poe test"
 
 test:
-  runner: pytest
-  framework: pytest
+  - test/test_inventario.py
+  - test/test_medicamento.py
+  - test/test_ticket.py
