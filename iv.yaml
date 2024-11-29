@@ -1,2 +1,6 @@
 lenguaje: python
 entidad: medication_management/inventario.py
+automatizar:
+  fichero: pyproject.toml
+  orden: "poe check"
+  

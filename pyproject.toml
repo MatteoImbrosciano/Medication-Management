@@ -2,10 +2,21 @@
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[project]
+[tool.poetry]
 name = "medication_management"
 version = "0.1.0"
-description = "Sistema de gestión de medicamentos"
+description = "Sistema di gestione dei medicinali"
+authors = ["Matteo Imbrosciano <matteo.imbrosciano16@gmail.com>"]
+license = "GPL-3.0-or-later"
 readme = "README.md"
-license = { text = "GPL-3.0-or-later" }
-requires-python = ">=3.9"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^7.0"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.31.1"
+
+[tool.poe.tasks]
+install = "poetry install"
+check = "python -m py_compile medication_management/*.py"

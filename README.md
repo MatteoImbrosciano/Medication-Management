@@ -26,3 +26,5 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [User Stories](./docs/user_stories.md).
 - [User Journeys](./docs/user_journeys.md).
 - [Milestones](./docs/milestones.md).
+- [Gestor Dependencias](./docs/gestor_dependencias.md).
+- [Gestor Tareas](./docs/gestor_tareas.md).

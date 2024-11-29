@@ -11,3 +11,11 @@ __pycache__/
 
 # Ignora directory di ambienti virtuali Python
 venv/
+
+# Ignora i file generati dai test
+test_output/
+*.log
+*.tmp
+*.coverage
+*.htmlcov
+coverage/
