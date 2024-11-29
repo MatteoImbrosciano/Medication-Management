@@ -29,3 +29,4 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [Gestor Dependencias](./docs/gestor_dependencias.md).
 - [Gestor Tareas](./docs/gestor_tareas.md).
 - [Herramientas de Test](./docs/herramientas_test.md).
+    poe test check
