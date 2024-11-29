@@ -4,8 +4,9 @@
 
 Per scegliere gli strumenti di test per il nostro progetto, abbiamo considerato i seguenti criteri:
 
-1. **Valutazione**: La qualità e la popolarità dello strumento sono state analizzate tramite la piattaforma [Snyk Advisor](https://snyk.io/advisor).
-2. **Flessibilità**: Deve offrire sia una libreria per le asserzioni, sia funzionalità di test runner e supporto per test automatizzati, permettendo di coprire in modo efficace le storie utente.
+1. **Facilità d'uso e manutenzione**: Lo strumento deve essere intuitivo da configurare e utilizzare, con una curva di apprendimento ridotta.
+2. **Evitazione del debito tecnico**: Deve supportare buone pratiche di sviluppo e non introdurre complessità inutili.
+3. **Raccomandazioni della comunità**: La popolarità e il supporto da parte della comunità sono stati valutati tramite [Snyk Advisor](https://snyk.io/advisor).
 
 ---
 
@@ -17,13 +18,20 @@ Abbiamo preso in considerazione diversi strumenti di test disponibili per Python
 - **Descrizione**: Pytest è un framework versatile che combina funzionalità di libreria per asserzioni e test runner.
 - **Valutazione su Snyk Advisor**: [Pytest](https://snyk.io/advisor/python/pytest) - 96.
 - **Pro**:
-  - Facile da configurare e usare.
   - Supporta fixture per la preparazione dei test.
   - Parametrizzazione avanzata per ridurre la duplicazione di codice.
   - Ampio supporto dalla community e ottima documentazione.
   - Integrazione con strumenti di copertura del codice (pytest-cov).
 - **Contro**:
   - Può richiedere più configurazioni iniziali per progetti complessi.
+
+#### **Adattamento degli Assert in Pytest**
+Gli assert in Pytest verificano che una determinata condizione sia vera. Se la condizione risulta falsa, Pytest fornisce un messaggio di errore chiaro e leggibile, utile per diagnosticare rapidamente i problemi.
+
+Nel nostro progetto, utilizziamo gli assert per:
+1. **Verificare le funzionalità principali** delle classi e dei metodi, come il calcolo corretto delle quantità o dei prezzi.
+2. **Validare errori e eccezioni**: Ad esempio, controlliamo che vengano generate eccezioni appropriate quando un valore non è valido.
+3. **Collegare i test alle storie utente**: Ogni funzionalità testata corrisponde a un requisito del cliente o a una storia utente.
 
 ---
 
@@ -70,19 +78,9 @@ Abbiamo preso in considerazione diversi strumenti di test disponibili per Python
 
 Per il nostro progetto, abbiamo scelto **Pytest** come strumento principale di testing. La scelta è motivata dai seguenti fattori:
 
-1. **Valutazione**: Pytest ha una valutazione eccellente su Snyk Advisor (96), il che garantisce affidabilità e sicurezza.
-2. **Flessibilità**: Con Pytest possiamo facilmente implementare test unitari e funzionali, sfruttando funzionalità come fixture e parametrizzazione senza necessità di linguaggi aggiuntivi (es. Gherkin).
-
----
-
-## Confronto con Pytest-BDD, Behave e Unittest
-
-- **Pytest-BDD** e **Behave** sono strumenti validi per progetti che richiedono scenari complessi o un approccio BDD, ma non sono la scelta migliore per il nostro progetto, perché:
-  - **Semplicità del progetto**: Il nostro progetto non richiede scenari complessi o linguaggio naturale per descrivere i test.
-  - **Focus sui test unitari**: Pytest è sufficiente per coprire tutte le storie utente e verificare la logica di business del sistema.
-  - **Overhead evitabile**: L'adozione di strumenti BDD introdurrebbe un overhead inutile e maggiore complessità nella configurazione.
-
-- **Unittest**, pur essendo incluso nella libreria standard, non offre la flessibilità e le funzionalità avanzate di Pytest, risultando meno adatto per un progetto con esigenze di test più evolute.
+1. **Facilità d'uso**: Pytest semplifica l'esecuzione di test e la gestione degli errori, riducendo al minimo la complessità.
+2. **Flessibilità**: Offre supporto avanzato per fixture, parametrizzazione e test delle eccezioni.
+3. **Comunità e Valutazione**: Pytest è ampiamente supportato e raccomandato, con un'alta valutazione su Snyk Advisor.
 
 ---
 
