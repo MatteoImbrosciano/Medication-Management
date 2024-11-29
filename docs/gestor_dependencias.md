@@ -1,54 +1,55 @@
 # Gestore di Dipendenze
 
-## Criteri di Selezione
-Per scegliere il gestore di dipendenze per il nostro progetto, abbiamo considerato i seguenti criteri:
+## **Criterios de Selección**
+Para elegir el gestor de dependencias para nuestro proyecto, hemos considerado los siguientes criterios:
 
-1. **Supporto**: Il gestore di dipendenze deve essere compatibile con il runtime scelto (in questo caso Python) e supportare gli standard moderni come `pyproject.toml`.
-2. **Semplicità**: Deve essere facile da usare, con comandi intuitivi e una configurazione minima.
-3. **Comunità**: Deve avere una community attiva, in grado di fornire supporto in caso di problemi.
+1. **Compatibilidad**: El gestor de dependencias debe ser compatible con el runtime elegido (en este caso Python) y admitir estándares modernos como `pyproject.toml`.
+2. **Simplicidad**: Debe ser fácil de usar, con comandos intuitivos y una configuración mínima.
+3. **Comunidad**: Debe contar con una comunidad activa que proporcione soporte en caso de problemas.
 
 ---
 
-## Gestori di Dipendenze
-Esistono diversi gestori di dipendenze per Python. Tra i principali, abbiamo considerato **Poetry**, **PDM** e **Hatch**.
+## **Gestores de Dependencias**
+Existen varios gestores de dependencias para Python. Entre los principales, hemos considerado **Poetry**, **PDM** y **Hatch**.
 
 ### 1. **Poetry**
-- **Descrizione**: Poetry è un gestore moderno che utilizza `pyproject.toml` come file di configurazione principale.
-- **Pro**:
-  - Compatibile con gli standard Python, inclusa la PEP 518.
-  - Blocca le versioni delle dipendenze tramite un file `poetry.lock`.
-  - Ampia community e aggiornamenti regolari.
-- **Contro**:
-  - Richiede l’installazione iniziale, ma è ben documentata.
-- **Snyk - Analisi delle Vulnerabilità**: [Snyk su Poetry](https://snyk.io/advisor/python/poetry)
+- **Descripción**: Poetry es un gestor moderno que utiliza `pyproject.toml` como archivo principal de configuración.
+- **Ventajas**:
+  - Compatible con los estándares de Python, incluida la PEP 518.
+  - Bloquea las versiones de las dependencias mediante un archivo `poetry.lock`.
+  - Amplia comunidad y actualizaciones regulares.
+- **Desventajas**:
+  - Requiere instalación inicial, aunque está bien documentada.
+- **Snyk - Análisis de Vulnerabilidades**: [Snyk sobre Poetry](https://snyk.io/advisor/python/poetry)
 
 ---
 
 ### 2. **PDM**
-- **Descrizione**: PDM è uno strumento minimalista per la gestione delle dipendenze, che utilizza anche `pyproject.toml`.
-- **Pro**:
-  - Leggero e rapido.
-  - Supporta la PEP 582, permettendo l’uso senza ambienti virtuali.
-- **Contro**:
-  - Meno popolare rispetto a Poetry, con una community più piccola.
-- **Snyk - Analisi delle Vulnerabilità**: [Snyk su PDM](https://snyk.io/advisor/python/pdm)
+- **Descripción**: PDM es una herramienta minimalista para la gestión de dependencias, que también utiliza `pyproject.toml`.
+- **Ventajas**:
+  - Ligero y rápido.
+  - Soporta la PEP 582, permitiendo su uso sin entornos virtuales.
+- **Desventajas**:
+  - Menos popular que Poetry, con una comunidad más pequeña.
+- **Snyk - Análisis de Vulnerabilidades**: [Snyk sobre PDM](https://snyk.io/advisor/python/pdm)
 
 ---
 
 ### 3. **Hatch**
-- **Descrizione**: Hatch è un gestore di dipendenze con un focus sulla gestione degli ambienti virtuali e configurazioni avanzate.
-- **Pro**:
-  - Supporto per configurazioni multi-ambiente, ideale per progetti complessi.
-  - Integrazione con strumenti di sviluppo, come la gestione di versioni multiple.
-- **Contro**:
-  - Community più piccola rispetto a Poetry.
-  - Può risultare complesso per progetti semplici.
-- **Snyk - Analisi delle Vulnerabilità**: [Snyk su Hatch](https://snyk.io/advisor/python/hatch)
+- **Descripción**: Hatch es un gestor de dependencias enfocado en la gestión de entornos virtuales y configuraciones avanzadas.
+- **Ventajas**:
+  - Soporte para configuraciones multi-entorno, ideal para proyectos complejos.
+  - Integración con herramientas de desarrollo, como la gestión de múltiples versiones.
+- **Desventajas**:
+  - Comunidad más pequeña en comparación con Poetry.
+  - Puede ser complejo para proyectos simples.
+- **Snyk - Análisis de Vulnerabilidades**: [Snyk sobre Hatch](https://snyk.io/advisor/python/hatch)
 
 ---
 
-## Scelta del Gestore di Dipendenze
-Per il nostro progetto, abbiamo scelto **Poetry** come gestore di dipendenze. Questo perché:
-1. È compatibile con `pyproject.toml`, che è lo standard moderno per la configurazione di progetti Python.
-2. Offre una gestione avanzata delle dipendenze con il blocco delle versioni.
-3. Ha una community attiva e regolarmente aggiornata, facilitando il supporto e l'evoluzione del progetto.
+## **Selección del Gestor de Dependencias**
+Para nuestro proyecto, hemos elegido **Poetry** como gestor de dependencias. Las razones son:
+
+1. Es compatible con `pyproject.toml`, que es el estándar moderno para la configuración de proyectos Python.
+2. Ofrece una gestión avanzada de dependencias con bloqueo de versiones.
+3. Cuenta con una comunidad activa y actualizada regularmente, facilitando el soporte y la evolución del proyecto.
