@@ -4,9 +4,8 @@
 
 Per scegliere gli strumenti di test per il nostro progetto, abbiamo considerato i seguenti criteri:
 
-1. **Compatibilità**: Lo strumento deve essere pienamente compatibile con il linguaggio di programmazione scelto (Python).
-2. **Valutazione**: La qualità e la popolarità dello strumento sono state analizzate tramite la piattaforma [Snyk Advisor](https://snyk.io/advisor).
-3. **Flessibilità**: Deve offrire sia una libreria per le asserzioni, sia funzionalità di test runner e supporto per test automatizzati, permettendo di coprire in modo efficace le storie utente.
+1. **Valutazione**: La qualità e la popolarità dello strumento sono state analizzate tramite la piattaforma [Snyk Advisor](https://snyk.io/advisor).
+2. **Flessibilità**: Deve offrire sia una libreria per le asserzioni, sia funzionalità di test runner e supporto per test automatizzati, permettendo di coprire in modo efficace le storie utente.
 
 ---
 
@@ -71,9 +70,8 @@ Abbiamo preso in considerazione diversi strumenti di test disponibili per Python
 
 Per il nostro progetto, abbiamo scelto **Pytest** come strumento principale di testing. La scelta è motivata dai seguenti fattori:
 
-1. **Compatibilità**: Pytest è perfettamente integrato con Python e offre tutto il necessario per scrivere e gestire test unitari, coprendo i requisiti del progetto.
-2. **Valutazione**: Pytest ha una valutazione eccellente su Snyk Advisor (96), il che garantisce affidabilità e sicurezza.
-3. **Flessibilità**: Con Pytest possiamo facilmente implementare test unitari e funzionali, sfruttando funzionalità come fixture e parametrizzazione senza necessità di linguaggi aggiuntivi (es. Gherkin).
+1. **Valutazione**: Pytest ha una valutazione eccellente su Snyk Advisor (96), il che garantisce affidabilità e sicurezza.
+2. **Flessibilità**: Con Pytest possiamo facilmente implementare test unitari e funzionali, sfruttando funzionalità come fixture e parametrizzazione senza necessità di linguaggi aggiuntivi (es. Gherkin).
 
 ---
 
