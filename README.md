@@ -28,3 +28,4 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [Milestones](./docs/milestones.md).
 - [Gestor Dependencias](./docs/gestor_dependencias.md).
 - [Gestor Tareas](./docs/gestor_tareas.md).
+- [Herramientas de Test](./docs/herramientas_test.md).
