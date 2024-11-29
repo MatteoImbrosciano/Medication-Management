@@ -1,68 +1,66 @@
-# Gestore di Tareas
+## **Criterios de Selección**
+Para elegir el gestor de tareas para nuestro proyecto, hemos considerado los siguientes criterios:
 
-## Criteri di Selezione
-Per scegliere il gestore di tareas per il nostro progetto, abbiamo considerato i seguenti criteri:
-
-1. **Semplicità**: La soluzione deve essere facile da configurare e utilizzare, con comandi intuitivi e una curva di apprendimento ridotta.
-2. **Rendimento**: Il gestore deve essere rapido ed efficiente nell'esecuzione delle tareas, anche in progetti di grandi dimensioni.
-3. **Comunità**: Deve avere una community attiva per fornire supporto in caso di problemi.
+1. **Simplicidad**: La solución debe ser fácil de configurar y utilizar, con comandos intuitivos y una curva de aprendizaje reducida.
+2. **Rendimiento**: El gestor debe ser rápido y eficiente en la ejecución de las tareas, incluso en proyectos de gran tamaño.
+3. **Comunidad**: Debe contar con una comunidad activa que proporcione soporte en caso de problemas.
 
 ---
 
-## Strumenti Analizzati
+## **Herramientas Analizadas**
 
 ### 1. **Make**
-- **Descrizione**: Uno strumento generico per la gestione di tareas, ampiamente utilizzato in diversi ecosistemi di sviluppo.
-- **Pro:**
-  - Altamente performante e affidabile.
-  - Definizione chiara delle tareas tramite un file `Makefile`.
-- **Contro:**
-  - Richiede l'installazione di `make` su sistemi Windows, riducendo la portabilità.
-  - Non specifico per Python, il che lo rende meno intuitivo in questo contesto.
-- **Documentazione Ufficiale:** [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
+- **Descripción**: Una herramienta genérica para la gestión de tareas, ampliamente utilizada en diversos ecosistemas de desarrollo.
+- **Ventajas:**
+  - Altamente eficiente y confiable.
+  - Definición clara de tareas mediante un archivo `Makefile`.
+- **Desventajas:**
+  - Requiere la instalación de `make` en sistemas Windows, lo que reduce la portabilidad.
+  - No es específico para Python, lo que lo hace menos intuitivo en este contexto.
+- **Documentación Oficial:** [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
 
 ---
 
 ### 2. **Invoke**
-- **Descrizione**: Un task runner specifico per Python, che utilizza script Python per definire tareas personalizzate.
-- **Pro:**
-  - Semplice da configurare grazie all'uso di Python.
-  - Flessibilità nella definizione di tareas complesse.
-- **Contro:**
-  - Dipende dal runtime Python, rendendolo meno portabile rispetto a strumenti generici.
-- **Comunità:** La community di Invoke è più piccola rispetto ad altri strumenti come `Make`.
-- **Documentazione Ufficiale:** [Invoke Documentation](https://www.pyinvoke.org/)
+- **Descripción**: Un gestor de tareas específico para Python, que utiliza scripts en Python para definir tareas personalizadas.
+- **Ventajas:**
+  - Fácil de configurar gracias al uso de Python.
+  - Flexibilidad para definir tareas complejas.
+- **Desventajas:**
+  - Depende del runtime de Python, lo que lo hace menos portable comparado con herramientas genéricas.
+  - **Comunidad:** La comunidad de Invoke es más pequeña en comparación con otras herramientas como `Make`.
+- **Documentación Oficial:** [Invoke Documentation](https://www.pyinvoke.org/)
 
 ---
 
 ### 3. **Poethepoet**
-- **Descrizione**: Un task runner moderno progettato per integrarsi con `pyproject.toml`, ideale per progetti Python.
-- **Pro:**
-  - Integrazione perfetta con il gestore di dipendenze **Poetry**.
-  - Centralizzazione della configurazione delle tareas e delle dipendenze in un unico file.
-  - Semplice da configurare e utilizzare.
-- **Contro:**
-  - Community più piccola rispetto a strumenti come `Make`.
-- **Rendimento:** Ottimo per progetti Python-specific.
-- **Snyk - Analisi delle Vulnerabilità:** [Snyk su Poethepoet](https://snyk.io/advisor/python/poethepoet)
+- **Descripción**: Un gestor de tareas moderno diseñado para integrarse con `pyproject.toml`, ideal para proyectos en Python.
+- **Ventajas:**
+  - Integración perfecta con el gestor de dependencias **Poetry**.
+  - Centralización de la configuración de tareas y dependencias en un solo archivo.
+  - Fácil de configurar y usar.
+- **Desventajas:**
+  - Comunidad más pequeña en comparación con herramientas como `Make`.
+- **Rendimiento:** Excelente para proyectos específicos de Python.
+- **Snyk - Análisis de Vulnerabilidades:** [Snyk sobre Poethepoet](https://snyk.io/advisor/python/poethepoet)
 
 ---
 
 ### 4. **Taskipy**
-- **Descrizione:** Un task runner minimalista che utilizza anche `pyproject.toml` per configurare le tareas.
-- **Pro:**
-  - Leggero e facile da configurare.
-  - Supporto diretto per `pyproject.toml`.
-- **Contro:**
-  - Funzionalità limitate rispetto a strumenti come Poethepoet.
-  - Documentazione meno approfondita.
-- **Snyk - Analisi delle Vulnerabilità:** [Snyk su Taskipy](https://snyk.io/advisor/python/taskipy)
+- **Descripción:** Un gestor de tareas minimalista que también utiliza `pyproject.toml` para configurar las tareas.
+- **Ventajas:**
+  - Ligero y fácil de configurar.
+  - Soporte directo para `pyproject.toml`.
+- **Desventajas:**
+  - Funcionalidad limitada en comparación con herramientas como Poethepoet.
+  - Documentación menos completa.
+- **Snyk - Análisis de Vulnerabilidades:** [Snyk sobre Taskipy](https://snyk.io/advisor/python/taskipy)
 
 ---
 
-## Scelta del Gestore di Tareas
-Per il nostro progetto, abbiamo scelto **Poethepoet** come gestore di tareas. La decisione si basa sui seguenti motivi:
+## **Selección del Gestor de Tareas**
+Para nuestro proyecto, hemos elegido **Poethepoet** como gestor de tareas. La decisión se basa en los siguientes motivos:
 
-1. **Semplicità**: Poethepoet è facile da configurare e integra le tareas direttamente in `pyproject.toml`.
-2. **Rendimento**: È ottimizzato per progetti Python-specific, garantendo rapidità nell'esecuzione delle tareas.
-3. **Comunità**: Sebbene più piccola rispetto a strumenti generici, offre documentazione chiara e supporto per progetti Python.
+1. **Simplicidad**: Poethepoet es fácil de configurar e integra las tareas directamente en `pyproject.toml`.
+2. **Rendimiento**: Está optimizado para proyectos específicos de Python, garantizando rapidez en la ejecución de las tareas.
+3. **Comunidad**: Aunque más pequeña en comparación con herramientas genéricas, ofrece documentación clara y soporte para proyectos en Python.
