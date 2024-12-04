@@ -1,29 +1,30 @@
-# Strumenti di Test
+## Criteri di Selezione
 
-## Criteri di Decisione
+Per scegliere gli strumenti di test per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
-Per scegliere gli strumenti di test per il nostro progetto, abbiamo considerato i seguenti criteri:
-
-1. **Facilità d'uso e manutenzione**: Lo strumento deve essere intuitivo da configurare e utilizzare, con una curva di apprendimento ridotta.
-2. **Evitazione del debito tecnico**: Deve supportare buone pratiche di sviluppo e non introdurre complessità inutili.
-3. **Raccomandazioni della comunità**: La popolarità e il supporto da parte della comunità sono stati valutati tramite [Snyk Advisor](https://snyk.io/advisor).
+1. **Compatibilità Nativa**
+2. **Salute del Progetto**
+3. **Comunità e Supporto**
+4. **Maturità del Progetto**
 
 ---
 
-## Strumenti Analizzati
+## Alternative Analizzate
 
-Abbiamo preso in considerazione diversi strumenti di test disponibili per Python, ognuno con vantaggi e svantaggi, come mostrato di seguito.
+### 1. **pytest**
 
-### **1. Pytest**
-- **Descrizione**: Pytest è un framework versatile che combina funzionalità di libreria per asserzioni e test runner.
+#### Descrizione
+`pytest` è uno dei framework di test più utilizzati nel mondo Python. È molto apprezzato per la sua semplicità e potenza. Supporta un'ampia gamma di funzionalità, come l'esecuzione di test, asserzioni avanzate e l'integrazione con strumenti di continuous integration.
+
+#### Pro
+- **Facilità di uso**: Ha una sintassi semplice e permette di scrivere test concisi.
+- **Comunità e Supporto**: È uno degli strumenti più popolari nel mondo Python, con una vasta comunità e frequenti aggiornamenti.
+- **Maturità**: È stato ampiamente adottato in progetti di qualsiasi dimensione.
 - **Valutazione su Snyk Advisor**: [Pytest](https://snyk.io/advisor/python/pytest) - 96.
-- **Pro**:
-  - Supporta fixture per la preparazione dei test.
-  - Parametrizzazione avanzata per ridurre la duplicazione di codice.
-  - Ampio supporto dalla community e ottima documentazione.
-  - Integrazione con strumenti di copertura del codice (pytest-cov).
-- **Contro**:
-  - Può richiedere più configurazioni iniziali per progetti complessi.
+- **Funzionalità avanzate**: Supporta fixture, parametrize, e vari metodi di reportistica.
+
+#### Contro
+- **Configurazione**: In alcuni casi, può richiedere una configurazione aggiuntiva per ottimizzare l'esperienza di utilizzo.
 
 #### **Adattamento degli Assert in Pytest**
 Gli assert in Pytest verificano che una determinata condizione sia vera. Se la condizione risulta falsa, Pytest fornisce un messaggio di errore chiaro e leggibile, utile per diagnosticare rapidamente i problemi.
@@ -72,15 +73,18 @@ Nel nostro progetto, utilizziamo gli assert per:
   - Non supporta nativamente funzionalità avanzate come fixture o parametrizzazione.
   - Maggiore verbosità rispetto a Pytest.
 
+
 ---
 
-## Scelta degli Strumenti di Test
+## Scelta Finale
 
-Per il nostro progetto, abbiamo scelto **Pytest** come strumento principale di testing. La scelta è motivata dai seguenti fattori:
+Dopo aver valutato le diverse alternative, la nostra scelta finale è stata quella di utilizzare **pytest**. Ecco i motivi principali:
 
-1. **Facilità d'uso**: Pytest semplifica l'esecuzione di test e la gestione degli errori, riducendo al minimo la complessità.
-2. **Flessibilità**: Offre supporto avanzato per fixture, parametrizzazione e test delle eccezioni.
-3. **Comunità e Valutazione**: Pytest è ampiamente supportato e raccomandato, con un'alta valutazione su Snyk Advisor.
+1. **Compatibilità e Supporto**: `pytest` è ampiamente supportato e continuamente aggiornato, con una comunità molto attiva. Inoltre, è compatibile con gli altri strumenti del nostro stack tecnologico.
+2. **Semplicità d'uso**: La sua facilità di configurazione e la possibilità di scrivere test semplici lo rendono ideale per il nostro progetto.
+3. **Flessibilità e Funzionalità avanzate**: La capacità di gestire test complessi e la possibilità di estendere facilmente il framework sono aspetti fondamentali che ci hanno spinto a preferirlo rispetto ad altre alternative.
+
+Infine, consideriamo che il supporto attivo e la documentazione di `pytest` garantiscono una soluzione stabile e sicura a lungo termine, riducendo il debito tecnico e migliorando la qualità del codice.
 
 ---
 
