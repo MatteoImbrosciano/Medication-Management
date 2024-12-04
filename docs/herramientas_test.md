@@ -8,7 +8,7 @@ Per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
 ## 1. **Scelta del Test Runner**
 
-Un **Test Runner** è uno strumento che esegue i test e fornisce i risultati. Abbiamo considerato diverse opzioni per il nostro progetto.
+Un **Test Runner** esegue i test e fornisce i risultati. Abbiamo considerato diverse opzioni per il nostro progetto.
 
 ### Alternative:
 
