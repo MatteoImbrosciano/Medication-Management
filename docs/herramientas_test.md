@@ -2,7 +2,7 @@
 Per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
 1. **Evitazione del debito tecnico**: È essenziale che gli strumenti permettano di scrivere test di alta qualità, evitando la duplicazione del codice e facilitando l'integrazione continua.
-2. **Raccomandazioni della comunità**: Gli strumenti scelti devono essere ampiamente adottati nella comunità Python e avere una buona reputazione per stabilità e prestazioni.
+2. **Raccomandazioni da parte di SNYK**: Gli strumenti scelti devono essere consigliati da parte di SNYK e avere una buona reputazione per stabilità e prestazioni.
 
 ---
 
