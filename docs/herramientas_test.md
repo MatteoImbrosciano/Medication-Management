@@ -40,7 +40,7 @@ Un **Test Runner** è uno strumento che esegue i test e fornisce i risultati. Ab
 
 - **Valutazione su Snyk Advisor**: [Pytest-BDD](https://snyk.io/advisor/python/pytest-bdd)
 
-### 2. **Unittest**
+### 1.3. **Unittest**
 **Unittest** è il modulo di testing predefinito in Python. Fornisce un framework di test basato su classi e metodi, che lo rende utile per progetti più strutturati.
 
 - **Vantaggi**:
