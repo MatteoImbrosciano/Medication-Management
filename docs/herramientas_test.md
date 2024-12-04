@@ -1,9 +1,8 @@
 ## Criteri di Selezione
-Per scegliere gli strumenti di test per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
+Per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
-1. **Facilità di uso e manutenzione**: Gli strumenti devono essere facili da configurare e utilizzare, con una documentazione chiara e attiva supporto della community.
-2. **Evitazione del debito tecnico**: È essenziale che gli strumenti permettano di scrivere test di alta qualità, evitando la duplicazione del codice e facilitando l'integrazione continua.
-3. **Raccomandazioni della comunità**: Gli strumenti scelti devono essere ampiamente adottati nella comunità Python e avere una buona reputazione per stabilità e prestazioni.
+1. **Evitazione del debito tecnico**: È essenziale che gli strumenti permettano di scrivere test di alta qualità, evitando la duplicazione del codice e facilitando l'integrazione continua.
+2. **Raccomandazioni della comunità**: Gli strumenti scelti devono essere ampiamente adottati nella comunità Python e avere una buona reputazione per stabilità e prestazioni.
 
 ---
 
@@ -14,10 +13,9 @@ Un **Test Runner** è uno strumento che esegue i test e fornisce i risultati. Ab
 ### Alternative:
 
 #### 1.1 **Pytest**
-**Pytest** è uno degli strumenti più utilizzati per il testing in Python. È semplice da configurare e usare, e offre molte funzionalità avanzate come fixture, asserzioni dettagliate e supporto per i test paralleli.
+**Pytest** è uno dei più utilizzati per il testing in Python. È semplice da configurare e usare, e offre molte funzionalità avanzate come fixture, asserzioni dettagliate e supporto per i test paralleli.
 
 **Vantaggi**:
-  - Facile da usare.
   - Grande supporto della comunità.
   - Supporto per test di unità, integrazione e accettazione.
 
@@ -66,7 +64,6 @@ La **Biblioteca di Asserzioni** è un componente fondamentale per i test, poich�
 **Pytest** ha già integrato un sistema di asserzioni che consente di esprimere facilmente le condizioni di test. È molto semplice da usare e consente di scrivere test chiari e leggibili.
 
 - **Vantaggi**:
-  - Facile da usare
   - Ottima integrazione con il Test Runner **Pytest**
   - Supporta una vasta gamma di casi di test
 
