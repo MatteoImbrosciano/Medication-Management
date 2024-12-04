@@ -29,7 +29,7 @@ Este proyecto está licenciado bajo la licencia [LICENCIA](./LICENCIA).
 - [Gestor Dependencias](./docs/gestor_dependencias.md).
 - [Gestor Tareas](./docs/gestor_tareas.md).
     ## Come eseguire i test
-    Per eseguire il check, utilizzare il seguente comando: poe test check
+    Per eseguire il check, utilizzare il seguente comando: poetry run poe check
 - [Herramientas de Test](./docs/herramientas_test.md).
     ## Come eseguire i test
-    Per eseguire i test, utilizzare il seguente comando: poe test test
+    Per eseguire i test, utilizzare il seguente comando: poetry run poe test
