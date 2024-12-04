@@ -1,93 +1,94 @@
 ## Criteri di Selezione
-
 Per scegliere gli strumenti di test per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
-1. **Compatibilità Nativa**
-2. **Salute del Progetto**
-3. **Comunità e Supporto**
-4. **Maturità del Progetto**
+1. **Facilità di uso e manutenzione**: Gli strumenti devono essere facili da configurare e utilizzare, con una documentazione chiara e attiva supporto della community.
+2. **Evitazione del debito tecnico**: È essenziale che gli strumenti permettano di scrivere test di alta qualità, evitando la duplicazione del codice e facilitando l'integrazione continua.
+3. **Raccomandazioni della comunità**: Gli strumenti scelti devono essere ampiamente adottati nella comunità Python e avere una buona reputazione per stabilità e prestazioni.
 
 ---
 
-## Alternative Analizzate
+## 1. **Scelta del Test Runner**
 
-### 1. **pytest**
+Un **Test Runner** è uno strumento che esegue i test e fornisce i risultati. Abbiamo considerato diverse opzioni per il nostro progetto.
 
-#### Descrizione
-`pytest` è uno dei framework di test più utilizzati nel mondo Python. È molto apprezzato per la sua semplicità e potenza. Supporta un'ampia gamma di funzionalità, come l'esecuzione di test, asserzioni avanzate e l'integrazione con strumenti di continuous integration.
+### Alternative:
 
-#### Pro
-- **Facilità di uso**: Ha una sintassi semplice e permette di scrivere test concisi.
-- **Comunità e Supporto**: È uno degli strumenti più popolari nel mondo Python, con una vasta comunità e frequenti aggiornamenti.
-- **Maturità**: È stato ampiamente adottato in progetti di qualsiasi dimensione.
-- **Valutazione su Snyk Advisor**: [Pytest](https://snyk.io/advisor/python/pytest) - 96.
-- **Funzionalità avanzate**: Supporta fixture, parametrize, e vari metodi di reportistica.
+#### 1.1 **Pytest**
+**Pytest** è uno degli strumenti più utilizzati per il testing in Python. È semplice da configurare e usare, e offre molte funzionalità avanzate come fixture, asserzioni dettagliate e supporto per i test paralleli.
 
-#### Contro
-- **Configurazione**: In alcuni casi, può richiedere una configurazione aggiuntiva per ottimizzare l'esperienza di utilizzo.
+**Vantaggi**:
+  - Facile da usare.
+  - Grande supporto della comunità.
+  - Supporto per test di unità, integrazione e accettazione.
 
-#### **Adattamento degli Assert in Pytest**
-Gli assert in Pytest verificano che una determinata condizione sia vera. Se la condizione risulta falsa, Pytest fornisce un messaggio di errore chiaro e leggibile, utile per diagnosticare rapidamente i problemi.
+**Svantaggi**:
+  - Alcune funzionalità avanzate richiedono una comprensione profonda della libreria
+  - Alcuni errori possono risultare difficili da diagnosticare per i principianti
 
-Nel nostro progetto, utilizziamo gli assert per:
-1. **Verificare le funzionalità principali** delle classi e dei metodi, come il calcolo corretto delle quantità o dei prezzi.
-2. **Validare errori e eccezioni**: Ad esempio, controlliamo che vengano generate eccezioni appropriate quando un valore non è valido.
-3. **Collegare i test alle storie utente**: Ogni funzionalità testata corrisponde a un requisito del cliente o a una storia utente.
+- **Valutazione su Snyk Advisor**: [Pytest](https://snyk.io/advisor/python/pytest) 
 
----
+#### 1.2 **Pytest-BDD**
+**Pytest-BDD** è un'estensione di Pytest che aggiunge supporto per il Behavior-Driven Development (BDD). Si basa sulla sintassi di Gherkin per scrivere scenari di test.
 
-### **2. Pytest-BDD**
-- **Descrizione**: Estensione di Pytest per implementare test basati sul comportamento (Behavior-Driven Development).
-- **Valutazione su Snyk Advisor**: [Pytest-BDD](https://snyk.io/advisor/python/pytest-bdd) - 78.
-- **Pro**:
-  - Permette di scrivere scenari di test in linguaggio naturale (Gherkin).
-  - Utilizza Pytest come base, quindi supporta fixture e altre funzionalità avanzate.
-- **Contro**:
-  - Non necessario per progetti senza requisiti complessi basati su scenari.
-  - Può introdurre overhead e complicazioni se non si utilizza BDD come metodologia principale.
+**Vantaggi**:
+  - Adatto per il BDD e la scrittura di scenari di test in linguaggio naturale.
+  - Integra perfettamente Pytest, quindi mantiene la compatibilità con altri strumenti e funzionalità di Pytest.
 
----
+**Svantaggi**:
+  - Richiede una conoscenza del BDD e del linguaggio Gherkin
+  - Non necessario per progetti che non seguono la metodologia BDD
 
-### **3. Behave**
-- **Descrizione**: Framework standalone per Behavior-Driven Development in Python.
-- **Valutazione su Snyk Advisor**: [Behave](https://snyk.io/advisor/python/behave) - 65.
-- **Pro**:
-  - Consente di scrivere test in formato Gherkin, utile per team che collaborano con non sviluppatori.
-  - Integrazione con strumenti CI/CD.
-- **Contro**:
-  - Complesso da configurare rispetto a Pytest.
-  - Maggiore curva di apprendimento per team non esperti di BDD.
-  - Dipende da librerie aggiuntive per funzionalità che Pytest ha nativamente.
+- **Valutazione su Snyk Advisor**: [Pytest-BDD](https://snyk.io/advisor/python/pytest-bdd)
 
----
+### 2. **Unittest**
+**Unittest** è il modulo di testing predefinito in Python. Fornisce un framework di test basato su classi e metodi, che lo rende utile per progetti più strutturati.
 
-### **4. Unittest**
-- **Descrizione**: Parte della libreria standard di Python, offre strumenti per scrivere test unitari.
-- **Valutazione su Snyk Advisor**: [Unittest](https://snyk.io/advisor/python/unittest).
-- **Pro**:
-  - Inclusa nella libreria standard, quindi non richiede installazione.
-  - Facile da usare per test di base.
-  - Ampio supporto per test strutturati (suite di test).
-- **Contro**:
-  - Meno flessibile rispetto a Pytest.
-  - Non supporta nativamente funzionalità avanzate come fixture o parametrizzazione.
-  - Maggiore verbosità rispetto a Pytest.
+- **Vantaggi**:
+  - Integrato direttamente in Python, senza bisogno di installare librerie esterne
+  - Basato sul paradigma di testing xUnit, facilmente comprensibile per chi ha esperienza con altri linguaggi
 
+- **Svantaggi**:
+  - Meno flessibile e più verboso rispetto a Pytest
+  - Funzionalità più limitate e meno estendibile
+    
+**Valutazione su Snyk Advisor**: [Unittest](https://snyk.io/advisor/python/unittest).
 
----
+### Scelta Finale:
+Dopo aver valutato le alternative, la scelta è ricaduta su **Pytest**. Sebbene **Pytest-BDD** sia utile per scenari BDD, il nostro progetto si concentra maggiormente su test unitari e di integrazione, quindi **Pytest** offre la soluzione più completa e versatile.
 
-## Scelta Finale
+## 2. **Scelta della Biblioteca di Asserzioni**
 
-Dopo aver valutato le diverse alternative, la nostra scelta finale è stata quella di utilizzare **pytest**. Ecco i motivi principali:
+La **Biblioteca di Asserzioni** è un componente fondamentale per i test, poiché permette di verificare che i risultati ottenuti siano quelli attesi.
 
-1. **Compatibilità e Supporto**: `pytest` è ampiamente supportato e continuamente aggiornato, con una comunità molto attiva. Inoltre, è compatibile con gli altri strumenti del nostro stack tecnologico.
-2. **Semplicità d'uso**: La sua facilità di configurazione e la possibilità di scrivere test semplici lo rendono ideale per il nostro progetto.
-3. **Flessibilità e Funzionalità avanzate**: La capacità di gestire test complessi e la possibilità di estendere facilmente il framework sono aspetti fondamentali che ci hanno spinto a preferirlo rispetto ad altre alternative.
+### Alternative:
 
-Infine, consideriamo che il supporto attivo e la documentazione di `pytest` garantiscono una soluzione stabile e sicura a lungo termine, riducendo il debito tecnico e migliorando la qualità del codice.
+#### 2.1 **Pytest**
+**Pytest** ha già integrato un sistema di asserzioni che consente di esprimere facilmente le condizioni di test. È molto semplice da usare e consente di scrivere test chiari e leggibili.
 
----
+- **Vantaggi**:
+  - Facile da usare
+  - Ottima integrazione con il Test Runner **Pytest**
+  - Supporta una vasta gamma di casi di test
 
-## Conclusione
+- **Svantaggi**:
+  - Limitato rispetto a librerie come **Hypothesis** per il testing basato su proprietà
 
-La scelta di **Pytest** come framework e test runner principale è stata fatta tenendo conto delle esigenze del progetto, dei requisiti di test e dei criteri di valutazione sopra descritti. La combinazione di facilità d'uso, ampia documentazione e integrazione nativa lo rende lo strumento ideale per garantire la qualità del codice.
+#### 2.2 **Hypothesis**
+**Hypothesis** è una libreria di testing che consente di scrivere test basati su **strategie**. Genera automaticamente dati di test per le funzioni, verificando un numero maggiore di casi e migliorando la copertura del codice.
+
+**Vantaggi**:
+  - Genera automaticamente casi di test per una copertura migliore.
+  - Utile per il testing del comportamento e per test che richiedono vari input.
+  - Eccellente per il testing basato su proprietà.
+
+**Svantaggi**:
+  - Richiede tempo per imparare a generare i test corretti
+  - Può risultare eccessivo per test più semplici
+
+**Valutazione su Snyk Advisor**: [Hypothesis](https://snyk.io/advisor/python/hypothesis#readme)
+
+### Scelta Finale:
+La scelta finale per la **Biblioteca di Aserzioni** è **Pytest** integrato. Sebbene **Hypothesis** offra funzionalità potenti per il **property-based testing**, non è necessaria per il nostro progetto in quanto i test non richiedono la generazione automatica di casi complessi. L'asserzione integrata di **Pytest** è sufficiente per soddisfare le esigenze del nostro progetto.
+
+## Conclusioni
+La combinazione di **Pytest** come Test Runner e la sua libreria di asserzioni integrata è la scelta migliore per il nostro progetto. Essa offre un'ottima usabilità, una comunità attiva e una documentazione completa, che ci permetterà di scrivere test efficaci e facilmente manutenibili.
