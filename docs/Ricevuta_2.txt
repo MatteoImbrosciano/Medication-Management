@@ -1,0 +1,11 @@
+Farmacia San Marco
+
+Nome: Anna Bianchi
+Data: 27/08/2024
+
+Farmaci acquistati:
+1. Amoxicillina 250mg - €8.50
+2. Loratadina 10mg - €4.20
+3. Omeprazolo 20mg - €7.10
+
+Totale: €19.80
