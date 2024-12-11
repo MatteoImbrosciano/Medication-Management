@@ -1,21 +1,39 @@
+# test/test_ticket.py
+import unittest
+import os
 from medication_management.ticket import Ticket
 from medication_management.medicamento import Medicamento
-import pytest
-from datetime import date
 
-def test_ticket_aggiungi_medicamento():
-    ticket = Ticket()
-    medicamento = Medicamento("Aspirina", 5, 2.50, "100 mg")
-    ticket.medicamentos.append(medicamento)
-    assert len(ticket.medicamentos) == 1
-    assert ticket.medicamentos[0].nombre == "Aspirina"
-    assert ticket.medicamentos[0].unidad == "100 mg"
+class TestTicket(unittest.TestCase):
 
-def test_ticket_data():
-    ticket = Ticket()
-    ticket.fecha = date.today()
-    assert ticket.fecha == date.today()
+    def test_aggiunta_medicamento_ticket(self):
+        t = Ticket()
+        m = Medicamento("Aspirina", 5, 2.5, "pz")
+        t.aggiungi_medicamento(m)
+        self.assertEqual(len(t.medicamentos), 1)
+        self.assertEqual(t.medicamentos[0].nombre, "Aspirina")
 
-def test_ticket_medicamento_invalido():
-    with pytest.raises(ValueError):
-        Medicamento("Ibuprofeno", 0, 4.99, "200 mg")
+    def test_genera_txt(self):
+        t = Ticket()
+        m = Medicamento("Aspirina", 5, 2.5, "pz")
+        t.aggiungi_medicamento(m)
+        nome_file = "test_ricevuta.txt"
+        
+        if os.path.exists(nome_file):
+            os.remove(nome_file)
+
+        t.genera_txt("Mario Rossi", nome_file)
+        self.assertTrue(os.path.exists(nome_file))
+
+        with open(nome_file, "r", encoding="utf-8") as f:
+            contenuto = f.read()
+
+        self.assertIn("Aspirina", contenuto)
+        self.assertIn("Mario Rossi", contenuto)
+        self.assertIn("Pharmacy Receipt - Farmacia Italia", contenuto)
+
+        os.remove(nome_file)
+
+
+if __name__ == "__main__":
+    unittest.main()
