@@ -1,91 +1,80 @@
 ## Criteri di Selezione
-Per il nostro progetto, abbiamo preso in considerazione i seguenti criteri:
 
-1. **Evitazione del debito tecnico**: È essenziale che gli strumenti permettano di scrivere test di alta qualità, evitando la duplicazione del codice e facilitando l'integrazione continua.
-2. **Raccomandazioni da parte di SNYK**: Gli strumenti scelti devono essere consigliati da parte di SNYK e avere una buona reputazione per stabilità e prestazioni.
+### Librerie di asserzioni
 
----
+**Prerequisiti per la scelta della libreria di asserzioni:**
 
-## 1. **Scelta del Test Runner**
+- **Buona valutazione su Snyk Advisor:**  
+  Avere una buona valutazione su [Snyk Advisor](https://snyk.io/advisor) implica che lo strumento rispetta alti standard di sicurezza e gestione dei rischi, rendendolo affidabile per l’utilizzo in un repository.
+  
+- **Varietà di asserzioni:**  
+  In ultima analisi, si valorizzerà maggiormente una libreria che offra una gamma ampia di asserzioni, consentendo maggiore flessibilità nella realizzazione di test differenti.
 
-Un **Test Runner** esegue i test e fornisce i risultati. Abbiamo considerato diverse opzioni per il nostro progetto.
+### Test Runner
 
-### Alternative:
+**Prerequisiti per la scelta del test runner:**  
+Analogamente alle librerie di asserzioni, si richiedono:
 
-#### 1.1 **Pytest**
-**Pytest** è uno dei più utilizzati per il testing in Python. È semplice da configurare e usare, e offre molte funzionalità avanzate come fixture, asserzioni dettagliate e supporto per i test paralleli.
+- **Buona valutazione su Snyk Advisor:**  
+  Una buona valutazione su [Snyk Advisor](https://snyk.io/advisor) indica che lo strumento soddisfa standard elevati in termini di sicurezza e gestione dei rischi, dimostrandosi adatto all’uso in un progetto o repository.
 
-**Vantaggi**:
-  - Grande supporto della comunità.
-  - Supporto per test di unità, integrazione e accettazione.
+- **Scalabilità e supporto a lungo termine:**  
+  Si valuterà la capacità del test runner di scalare con la crescente complessità del progetto nei futuri Milestone. In tale ottica, caratteristiche come l’uso di fixture integrate e un output dettagliato, che faciliti il debugging in caso di molti errori, saranno particolarmente apprezzate.
 
-**Svantaggi**:
-  - Alcune funzionalità avanzate richiedono una comprensione profonda della libreria
-  - Alcuni errori possono risultare difficili da diagnosticare per i principianti
 
-- **Valutazione su Snyk Advisor**: [Pytest](https://snyk.io/advisor/python/pytest) 
+## Analisi delle Opzioni
 
-#### 1.2 **Pytest-BDD**
-**Pytest-BDD** è un'estensione di Pytest che aggiunge supporto per il Behavior-Driven Development (BDD). Si basa sulla sintassi di Gherkin per scrivere scenari di test.
+### Librerie di asserzioni esaminate
 
-**Vantaggi**:
-  - Adatto per il BDD e la scrittura di scenari di test in linguaggio naturale.
-  - Integra perfettamente Pytest, quindi mantiene la compatibilità con altri strumenti e funzionalità di Pytest.
+1. **unittest (PyUnit)**  
+   - Inclusa nella libreria standard di Python, garanzia di manutenzione e aggiornamenti.
+   - Set di asserzioni limitato, ma sicuro e affidabile.
+   - Non necessita di pagina Snyk dedicata, in quanto parte del core di Python.
 
-**Svantaggi**:
-  - Richiede una conoscenza del BDD e del linguaggio Gherkin
-  - Non necessario per progetti che non seguono la metodologia BDD
+2. **behave**  
+   - Link Snyk: [https://snyk.io/advisor/python/behave](https://snyk.io/advisor/python/behave)  
+   - Orientata al BDD, ma valutazione su Snyk e manutenzione non soddisfacenti.
+   - Non adatta per esigenze di lungo termine.
 
-- **Valutazione su Snyk Advisor**: [Pytest-BDD](https://snyk.io/advisor/python/pytest-bdd)
+3. **ensure**  
+   - Link Snyk: [https://snyk.io/advisor/python/ensure](https://snyk.io/advisor/python/ensure)  
+   - Punteggio non adeguato su Snyk Advisor.  
+   - Non garantisce gli standard di sicurezza richiesti.
 
-### 1.3. **Unittest**
-**Unittest** è il modulo di testing predefinito in Python. Fornisce un framework di test basato su classi e metodi, che lo rende utile per progetti più strutturati.
+4. **grappa**  
+   - Link Snyk: [https://snyk.io/advisor/python/grappa](https://snyk.io/advisor/python/grappa)  
+   - Bassa valutazione e manutenzione non ottimale.
+   
+5. **PyHamCrest**  
+   - Link Snyk: [https://snyk.io/advisor/python/pyhamcrest](https://snyk.io/advisor/python/pyhamcrest)  
+   - Non offre le garanzie di manutenzione e sicurezza necessarie.
 
-- **Vantaggi**:
-  - Integrato direttamente in Python, senza bisogno di installare librerie esterne
-  - Basato sul paradigma di testing xUnit, facilmente comprensibile per chi ha esperienza con altri linguaggi
+**Scelta finale per le librerie di asserzioni:**  
+Le opzioni esterne non garantiscono gli standard di sicurezza e manutenzione richiesti. `unittest`, come libreria standard, fornisce un supporto affidabile e continuo. Tuttavia, per test più complessi (ad esempio gestione di warning o asserzioni più espressive), si potrà integrare l’uso delle asserzioni di `pytest` e l’`assert` nativo di Python, ampliando così la gamma di test possibili senza perdere stabilità.
 
-- **Svantaggi**:
-  - Meno flessibile e più verboso rispetto a Pytest
-  - Funzionalità più limitate e meno estendibile
-    
-**Valutazione su Snyk Advisor**: [Unittest](https://snyk.io/advisor/python/unittest).
+### Test Runner esaminati
 
-### Scelta Finale:
-Dopo aver valutato le alternative, la scelta è ricaduta su **Pytest**. Sebbene **Pytest-BDD** sia utile per scenari BDD, il nostro progetto si concentra maggiormente su test unitari e di integrazione, quindi **Pytest** offre la soluzione più completa e versatile.
+1. **unittest come test runner**  
+   - Integrato, ma senza fixture evolute né output dettagliato.
+   - Non soddisfa i requisiti di scalabilità.
 
-## 2. **Scelta della Biblioteca di Asserzioni**
+2. **pytest**  
+   - Link Snyk: [https://snyk.io/advisor/python/pytest](https://snyk.io/advisor/python/pytest)  
+   - Ottime valutazioni su Snyk, comunità attiva, aggiornamenti frequenti.
+   - Fixture integrate, output chiaro, rilevamento automatico dei test, supporto a molti plugin.
+   
+3. **Nose2**  
+   - Link Snyk: [https://snyk.io/advisor/python/nose2](https://snyk.io/advisor/python/nose2)  
+   - Valutazioni non ideali. Non offre vantaggi rispetto a pytest.
 
-La **Biblioteca di Asserzioni** è un componente fondamentale per i test, poiché permette di verificare che i risultati ottenuti siano quelli attesi.
+**Scelta finale del test runner:**  
+`pytest` è la scelta ottimale: garantisce la sicurezza, la flessibilità e la scalabilità necessarie. L’integrazione con asserzioni semplici (`assert`) e la presenza di fixture semplificano il testing, rendendo più agile la crescita futura del progetto.
 
-### Alternative:
+## Conclusione
 
-#### 2.1 **Pytest**
-**Pytest** ha già integrato un sistema di asserzioni che consente di esprimere facilmente le condizioni di test. È molto semplice da usare e consente di scrivere test chiari e leggibili.
+La configurazione finale è dunque:
 
-- **Vantaggi**:
-  - Ottima integrazione con il Test Runner **Pytest**
-  - Supporta una vasta gamma di casi di test
+- **Libreria di asserzioni:** `unittest` come base, arricchita quando necessario con asserzioni di `pytest` e l’`assert` nativo di Python, per garantire una gamma più ampia di test.
+- **Test Runner:** `pytest`, per sfruttare la sua versatilità, le fixture integrate, il supporto della community, l’output chiaro e la buona valutazione di sicurezza su Snyk Advisor.
 
-- **Svantaggi**:
-  - Limitato rispetto a librerie come **Hypothesis** per il testing basato su proprietà
-
-#### 2.2 **Hypothesis**
-**Hypothesis** è una libreria di testing che consente di scrivere test basati su **strategie**. Genera automaticamente dati di test per le funzioni, verificando un numero maggiore di casi e migliorando la copertura del codice.
-
-**Vantaggi**:
-  - Genera automaticamente casi di test per una copertura migliore.
-  - Utile per il testing del comportamento e per test che richiedono vari input.
-  - Eccellente per il testing basato su proprietà.
-
-**Svantaggi**:
-  - Richiede tempo per imparare a generare i test corretti
-  - Può risultare eccessivo per test più semplici
-
-**Valutazione su Snyk Advisor**: [Hypothesis](https://snyk.io/advisor/python/hypothesis#readme)
-
-### Scelta Finale:
-La scelta finale per la **Biblioteca di Aserzioni** è **Pytest** integrato. Sebbene **Hypothesis** offra funzionalità potenti per il **property-based testing**, non è necessaria per il nostro progetto in quanto i test non richiedono la generazione automatica di casi complessi. L'asserzione integrata di **Pytest** è sufficiente per soddisfare le esigenze del nostro progetto.
-
-## Conclusioni
-La combinazione di **Pytest** come Test Runner e la sua libreria di asserzioni integrata è la scelta migliore per il nostro progetto. Essa offre un'ottima usabilità, una comunità attiva e una documentazione completa, che ci permetterà di scrivere test efficaci e facilmente manutenibili.
+Questa combinazione consente di mantenere un equilibrio tra stabilità, sicurezza, varietà di test e capacità di gestione di scenari complessi, favorendo uno sviluppo sostenibile del progetto nel tempo.
