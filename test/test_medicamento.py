@@ -1,18 +1,25 @@
+import unittest
 from medication_management.medicamento import Medicamento
-import pytest
 
-def test_medicamento_valido():
-    medicamento = Medicamento("Paracetamol", 10, 5.99, "500 mg")
-    assert medicamento.nombre == "Paracetamol"
-    assert medicamento.cantidad == 10
-    assert medicamento.precio == 5.99
-    assert medicamento.unidad == "500 mg"
+class TestMedicamento(unittest.TestCase):
 
-def test_medicamento_invalido():
-    # Test quantità non valida
-    with pytest.raises(ValueError):
-        Medicamento("Ibuprofeno", 0, 4.99, "200 mg")
-    
-    # Test prezzo non valido
-    with pytest.raises(ValueError):
-        Medicamento("Ibuprofeno", 10, -4.99, "200 mg")
+    def test_creazione_medicamento_valido(self):
+        m = Medicamento("Aspirina", 10, 2.5, "pz")
+        self.assertEqual(m.nombre, "Aspirina")
+        self.assertEqual(m.cantidad, 10)
+        self.assertEqual(m.precio, 2.5)
+        self.assertEqual(m.unidad, "pz")
+
+    def test_cantidad_invalida(self):
+        with self.assertRaises(ValueError) as context:
+            Medicamento("Aspirina", -1, 2.5, "pz")
+        self.assertIn("La cantidad debe ser un valor numérico positivo", str(context.exception))
+
+    def test_precio_invalido(self):
+        with self.assertRaises(ValueError) as context:
+            Medicamento("Aspirina", 10, -2.5, "pz")
+        self.assertIn("El precio debe ser un valor numérico positivo", str(context.exception))
+
+
+if __name__ == "__main__":
+    unittest.main()
