@@ -30,7 +30,6 @@ Analogamente alle librerie di asserzioni, si richiedono:
    - Link Snyk: (https://snyk.io/advisor/python/unittest)
    - Inclusa nella libreria standard di Python, garanzia di manutenzione e aggiornamenti.
    - Set di asserzioni limitato, ma sicuro e affidabile.
-   - Non necessita di pagina Snyk dedicata, in quanto parte del core di Python.
 
 3. **behave**  
    - Link Snyk: [https://snyk.io/advisor/python/behave](https://snyk.io/advisor/python/behave)  
