@@ -1,13 +1,8 @@
-# test/test_inventario.py
-
 import pytest
 from medication_management.inventario import Inventario
 from medication_management.medicamento import Medicamento
 from pathlib import Path
 
-# -------------------
-# Fixture per Inventario
-# -------------------
 @pytest.fixture
 def inventario_vuoto():
     return Inventario()
@@ -18,10 +13,6 @@ def inventario_con_medicamentos():
     inventario.agregar_medicamento(Medicamento(nombre="Paracetamolo", cantidad="50 mg", precio=0.50, unitad=2))
     inventario.agregar_medicamento(Medicamento(nombre="Ibuprofeno", cantidad="30 mg", precio=0.30, unitad=1))
     return inventario
-
-# -------------------
-# Test delle Funzionalità di Inventario
-# -------------------
 
 def test_inventario_iniziale_vuoto(inventario_vuoto):
     assert inventario_vuoto.medicamentos == []
@@ -41,13 +32,10 @@ def test_agregar_medicamento_tipo_errato(inventario_vuoto):
     with pytest.raises(TypeError, match="Solo se pueden agregar instancias de Medicamento"):
         inventario_vuoto.agregar_medicamento("No es un Medicamento")
 
-# -------------------
-# Test per la Gestione dei File all'interno di test_inventario.py
-# -------------------
-
 def test_leggi_file_esistente(tmp_path):
-    # Creazione di un file temporaneo
-    percorso_file = tmp_path / "pharmacy_receipt_1.txt"
+
+    # Percorso reale del file
+    percorso_file = Path("C:/Users/matte/OneDrive/Desktop/Medication-Management/docs/pharmacy_receipt_1.txt")
     contenuto_atteso = (
         "Pharmacy Receipt - Farmacia Italia  \n"
         "Cliente: Matteo Imbrosciano  \n"
