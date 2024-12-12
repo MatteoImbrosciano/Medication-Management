@@ -26,26 +26,27 @@ Analogamente alle librerie di asserzioni, si richiedono:
 
 ### Librerie di asserzioni esaminate
 
-1. **unittest (PyUnit)**  
+1. **unittest (PyUnit)**
+   - Link Snyk: (https://snyk.io/advisor/python/unittest)
    - Inclusa nella libreria standard di Python, garanzia di manutenzione e aggiornamenti.
    - Set di asserzioni limitato, ma sicuro e affidabile.
    - Non necessita di pagina Snyk dedicata, in quanto parte del core di Python.
 
-2. **behave**  
+3. **behave**  
    - Link Snyk: [https://snyk.io/advisor/python/behave](https://snyk.io/advisor/python/behave)  
    - Orientata al BDD, ma valutazione su Snyk e manutenzione non soddisfacenti.
    - Non adatta per esigenze di lungo termine.
 
-3. **ensure**  
+4. **ensure**  
    - Link Snyk: [https://snyk.io/advisor/python/ensure](https://snyk.io/advisor/python/ensure)  
    - Punteggio non adeguato su Snyk Advisor.  
    - Non garantisce gli standard di sicurezza richiesti.
 
-4. **grappa**  
+5. **grappa**  
    - Link Snyk: [https://snyk.io/advisor/python/grappa](https://snyk.io/advisor/python/grappa)  
    - Bassa valutazione e manutenzione non ottimale.
    
-5. **PyHamCrest**  
+6. **PyHamCrest**  
    - Link Snyk: [https://snyk.io/advisor/python/pyhamcrest](https://snyk.io/advisor/python/pyhamcrest)  
    - Non offre le garanzie di manutenzione e sicurezza necessarie.
 
