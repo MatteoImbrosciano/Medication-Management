@@ -1,36 +1,25 @@
-from datetime import date
+from medication_management.medicamento import Medicamento
+from datetime import datetime
 
 class Ticket:
-    
     def __init__(self):
         self.medicamentos = []
-        self.fecha = date.today()
+        self.fecha = datetime.now()
 
-    def aggiungi_medicamento(self, medicamento):
+    def agregar_medicamento(self, medicamento: Medicamento):
+        if not isinstance(medicamento, Medicamento):
+            raise TypeError("Solo se pueden agregar instancias de Medicamento")
         self.medicamentos.append(medicamento)
 
-    def genera_txt(self, nome_cliente, nome_file_txt):
+    def generar_ticket(self) -> str:
+        ticket = f"Ticket - Farmacia Italia\nFecha: {self.fecha.strftime('%d %B %Y')}\n\n"
+        if not self.medicamentos:
+            ticket += "Ticket vacío."
+            return ticket
 
-        try:
-            # Apri o crea il file di testo
-            with open(nome_file_txt, "w", encoding="utf-8") as file:
-                # Titolo e intestazione
-                file.write("Pharmacy Receipt - Farmacia Italia\n")
-                file.write(f"Cliente: {nome_cliente}\n")
-                file.write(f"Data: {self.fecha.strftime('%d %B %Y')}\n\n")
-                file.write("Articolo | Quantità | Unità | Importo (Euro):\n")
-
-                # Dati sui farmaci
-                totale = 0
-                for medicamento in self.medicamentos:
-                    prezzo_totale = medicamento.cantidad * medicamento.precio
-                    totale += prezzo_totale
-                    file.write(f"- {medicamento.nombre} | {medicamento.cantidad} | {medicamento.unidad} | €{prezzo_totale:.2f}\n")
-
-                # Totale
-                file.write(f"\nTotale: €{totale:.2f}\n")
-                file.write("Grazie per il suo acquisto!\n")
-
-            print(f"Ricevuta salvata in {nome_file_txt}")
-        except Exception as e:
-            print(f"Errore durante la creazione del file di testo: {e}")
+        detalles = "\n".join(
+            [f"{m.nombre} x{m.unitad} = {m.unitad * m.precio}€" for m in self.medicamentos]
+        )
+        total = sum(m.unitad * m.precio for m in self.medicamentos)
+        ticket += f"Artículos:\n{detalles}\n\nTotal: {total}€"
+        return ticket
