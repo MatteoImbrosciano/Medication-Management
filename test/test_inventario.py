@@ -34,7 +34,6 @@ def test_agregar_medicamento_tipo_errato(inventario_vuoto):
 
 def test_leggi_file_esistente(tmp_path):
 
-    # Percorso reale del file
     percorso_file = Path("C:/Users/matte/OneDrive/Desktop/Medication-Management/docs/pharmacy_receipt_1.txt")
     contenuto_atteso = (
         "Pharmacy Receipt - Farmacia Italia  \n"
@@ -53,7 +52,6 @@ def test_leggi_file_esistente(tmp_path):
     )
     percorso_file.write_text(contenuto_atteso, encoding='utf-8')
 
-    # Leggere il contenuto del file
     contenuto = percorso_file.read_text(encoding='utf-8')
     assert contenuto == contenuto_atteso, "Il contenuto del file letto non corrisponde a quello atteso."
 
@@ -72,7 +70,6 @@ def test_leggi_file_permessi_negati(tmp_path, monkeypatch):
     percorso_file = tmp_path / "restricted_file.txt"
     percorso_file.write_text("Contenuto", encoding='utf-8')
 
-    # Simula PermissionError
     def mock_read_text(*args, **kwargs):
         raise PermissionError("Permiso denegado")
 
