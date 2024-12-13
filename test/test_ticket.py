@@ -28,11 +28,12 @@ def test_generare_ticket_con_medicamentos():
     ticket.agregar_medicamento(medicamento1)
     ticket.agregar_medicamento(medicamento2)
     ticket_generato = ticket.generar_ticket()
-    assert "Paracetamolo x2 = 1.0€" in ticket_generato
-    assert "Ibuprofeno x1 = 0.3€" in ticket_generato
-    assert "Total: 1.3€" in ticket_generato
+    assert "Paracetamolo x2 = 1.00€" in ticket_generato  
+    assert "Ibuprofeno x1 = 0.30€" in ticket_generato
+    assert "Total: 1.30€" in ticket_generato
 
 def test_agregar_medicamento_tipo_errato():
     ticket = Ticket()
     with pytest.raises(TypeError, match="Solo se pueden agregar instancias de Medicamento"):
-        ticket.agregar_medicamento(123)  # Tipo errato
+        ticket.agregar_medicamento(123) 
+        
