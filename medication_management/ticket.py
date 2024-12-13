@@ -1,6 +1,8 @@
 from medication_management.medicamento import Medicamento
 from datetime import datetime
 
+from datetime import datetime
+
 class Ticket:
     def __init__(self):
         self.medicamentos = []
@@ -18,8 +20,9 @@ class Ticket:
             return ticket
 
         detalles = "\n".join(
-            [f"{m.nombre} x{m.unitad} = {m.unitad * m.precio}€" for m in self.medicamentos]
+            [f"{m.nombre} x{m.unitad} = {m.unitad * m.precio:.2f}€" for m in self.medicamentos]
         )
         total = sum(m.unitad * m.precio for m in self.medicamentos)
-        ticket += f"Artículos:\n{detalles}\n\nTotal: {total}€"
+        ticket += f"Artículos:\n{detalles}\n\nTotal: {total:.2f}€"
         return ticket
+    
