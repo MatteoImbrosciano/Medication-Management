@@ -18,7 +18,7 @@ class Inventario:
             [f"{m.nombre}: Cantidad={m.cantidad}, Precio={m.precio}€, Unitad={m.unitad}" for m in self.medicamentos]
         )
         return inventario
-
+    
     def importar_desde_txt(self, ruta: str):
         file_path = Path(ruta)
         if not file_path.exists():
