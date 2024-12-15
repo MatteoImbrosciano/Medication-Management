@@ -15,3 +15,4 @@ def test_medicamento_precio_negativo():
 def test_medicamento_unitad_negativa():
     with pytest.raises(ValueError, match="El unitad debe ser un valor positivo"):
         Medicamento(nombre="Aspirina", cantidad="20 mg", precio=0.20, unitad=-1)
+        
