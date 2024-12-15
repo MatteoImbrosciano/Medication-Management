@@ -77,3 +77,4 @@ def test_leggi_file_permessi_negati(tmp_path, monkeypatch):
     
     with pytest.raises(PermissionError, match="Permiso denegado"):
         percorso_file.read_text(encoding='utf-8')
+        
