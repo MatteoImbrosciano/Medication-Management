@@ -36,4 +36,3 @@ def test_agregar_medicamento_tipo_errato():
     ticket = Ticket()
     with pytest.raises(TypeError, match="Solo se pueden agregar instancias de Medicamento"):
         ticket.agregar_medicamento(123) 
-        
