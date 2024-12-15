@@ -36,3 +36,4 @@ class Inventario:
                     precio=float(precio.strip())
                 )
                 self.agregar_medicamento(medicamento)
+                
