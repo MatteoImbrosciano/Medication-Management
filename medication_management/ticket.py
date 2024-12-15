@@ -25,4 +25,3 @@ class Ticket:
         total = sum(m.unitad * m.precio for m in self.medicamentos)
         ticket += f"Artículos:\n{detalles}\n\nTotal: {total:.2f}€"
         return ticket
-    
