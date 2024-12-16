@@ -1,27 +1,42 @@
+import locale
+from datetime import datetime
 from medication_management.medicamento import Medicamento
-from datetime import datetime
-
-from datetime import datetime
 
 class Ticket:
     def __init__(self):
+        self.cliente = None
+        self.fecha = None
         self.medicamentos = []
-        self.fecha = datetime.now()
+        self.totale = None
 
-    def agregar_medicamento(self, medicamento: Medicamento):
-        if not isinstance(medicamento, Medicamento):
-            raise TypeError("Solo se pueden agregar instancias de Medicamento")
-        self.medicamentos.append(medicamento)
+    def cargar_ticket_desde_txt(self, file_path):
 
-    def generar_ticket(self) -> str:
-        ticket = f"Ticket - Farmacia Italia\nFecha: {self.fecha.strftime('%d %B %Y')}\n\n"
-        if not self.medicamentos:
-            ticket += "Ticket vacío."
-            return ticket
+        locale.setlocale(locale.LC_TIME, 'it_IT')  
 
-        detalles = "\n".join(
-            [f"{m.nombre} x{m.unitad} = {m.unitad * m.precio:.2f}€" for m in self.medicamentos]
-        )
-        total = sum(m.unitad * m.precio for m in self.medicamentos)
-        ticket += f"Artículos:\n{detalles}\n\nTotal: {total:.2f}€"
-        return ticket
+        with open(file_path, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+
+        for line in lines:
+            line = line.strip()
+
+            if line.startswith("Cliente:"):
+                self.cliente = line.replace("Cliente:", "").strip()
+
+            elif line.startswith("Data:"):
+                self.fecha = datetime.strptime(
+                    line.replace("Data:", "").strip(), "%d %B %Y"
+                )
+
+            elif line.startswith("Totale:"):
+                self.totale = float(line.replace("Totale:", "").strip().replace("€", ""))
+
+            elif "|" in line and not line.startswith("Articolo"):
+                parts = line.split("|")
+                if len(parts) == 4:
+                    nombre = parts[0].strip()
+                    cantidad = parts[1].strip()
+                    unitad = parts[2].strip()
+                    precio = float(parts[3].strip().replace("€", ""))
+                    medicamento = Medicamento(nombre, 1, precio, cantidad)
+                    self.medicamentos.append(medicamento)
+    
