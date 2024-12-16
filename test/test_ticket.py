@@ -1,38 +1,18 @@
 import pytest
 from medication_management.ticket import Ticket
-from medication_management.medicamento import Medicamento
 from datetime import datetime
 
-def test_ticket_iniziale():
-    ticket = Ticket()
-    assert ticket.medicamentos == []
-    assert isinstance(ticket.fecha, datetime)
+def test_cargar_ticket_desde_file_esistente():
+    
+    file_path = "C:/Users/matte/OneDrive/Desktop/Medication-Management/docs/pharmacy_receipt_1.txt"
 
-def test_agregar_medicamento_al_ticket():
     ticket = Ticket()
-    medicamento = Medicamento(nombre="Aspirina", cantidad="10 mg", precio=0.20, unitad=3)
-    ticket.agregar_medicamento(medicamento)
-    assert len(ticket.medicamentos) == 1
-    assert ticket.medicamentos[0] == medicamento
+    ticket.cargar_ticket_desde_txt(file_path)
 
-def test_generare_ticket_vuoto():
-    ticket = Ticket()
-    ticket_generato = ticket.generar_ticket()
-    assert "Ticket - Farmacia Italia" in ticket_generato
-    assert "Ticket vacío." in ticket_generato
-
-def test_generare_ticket_con_medicamentos():
-    ticket = Ticket()
-    medicamento1 = Medicamento(nombre="Paracetamolo", cantidad="50 mg", precio=0.50, unitad=2)
-    medicamento2 = Medicamento(nombre="Ibuprofeno", cantidad="30 mg", precio=0.30, unitad=1)
-    ticket.agregar_medicamento(medicamento1)
-    ticket.agregar_medicamento(medicamento2)
-    ticket_generato = ticket.generar_ticket()
-    assert "Paracetamolo x2 = 1.00€" in ticket_generato  
-    assert "Ibuprofeno x1 = 0.30€" in ticket_generato
-    assert "Total: 1.30€" in ticket_generato
-
-def test_agregar_medicamento_tipo_errato():
-    ticket = Ticket()
-    with pytest.raises(TypeError, match="Solo se pueden agregar instancias de Medicamento"):
-        ticket.agregar_medicamento(123) 
+    assert ticket.cliente == "Matteo Imbrosciano"
+    assert ticket.fecha == datetime(2024, 2, 15)
+    assert ticket.totale == 55.70
+    assert len(ticket.medicamentos) == 6
+    assert ticket.medicamentos[0].nombre == "Sintrom"
+    assert ticket.medicamentos[0].unitad == "1 mg"
+    assert ticket.medicamentos[0].precio == 7.50
