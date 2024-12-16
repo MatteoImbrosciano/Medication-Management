@@ -1,18 +1,17 @@
 import pytest
 from medication_management.medicamento import Medicamento
 
-def test_medicamento_valido():
-    medicamento = Medicamento(nombre="Paracetamolo", cantidad="50 mg", precio=0.50, unitad=2)
-    assert medicamento.nombre == "Paracetamolo"
-    assert medicamento.cantidad == "50 mg"
-    assert medicamento.precio == 0.50
-    assert medicamento.unitad == 2
+def test_crear_medicamento_valido():
+    med = Medicamento("Paracetamol", 10, 5.0, "mg")
+    assert med.nombre == "Paracetamol"
+    assert med.cantidad == 10
+    assert med.precio == 5.0
+    assert med.unitad == "mg"
 
-def test_medicamento_precio_negativo():
-    with pytest.raises(ValueError, match="El precio debe ser un valor numérico positivo"):
-        Medicamento(nombre="Ibuprofeno", cantidad="10 mg", precio=-0.30, unitad=1)
-
-def test_medicamento_unitad_negativa():
-    with pytest.raises(ValueError, match="El unitad debe ser un valor positivo"):
-        Medicamento(nombre="Aspirina", cantidad="20 mg", precio=0.20, unitad=-1)
-        
+def test_crear_medicamento_invalido():
+    with pytest.raises(ValueError):
+        Medicamento("", 10, 5.0, "mg")
+    with pytest.raises(ValueError):
+        Medicamento("Paracetamol", -1, 5.0, "mg")
+    with pytest.raises(ValueError):
+        Medicamento("Paracetamol", 10, -5.0, "mg")
