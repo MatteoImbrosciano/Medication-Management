@@ -9,11 +9,10 @@ El objetivo se considerará alcanzado cuando el código represente correctamente
   
 ---
 
-**[M1] Milestone 1: Gestione del inventario**
+**[M1] Milestone 1: Leggere il file in cui compaiono i ticket dei medicinali**
 
-Es necesario desarrollar un sistema que permita al usuario visualizar y gestionar el inventario de medicamentos. El sistema deberá proporcionar una vista clara y en tiempo real de los medicamentos disponibles, permitiendo al usuario saber siempre qué medicamentos posee y en qué cantidad. Esto permitirá evitar compras duplicadas y asegurarse de no quedarse sin medicamentos esenciales. 
-En este hito, el usuario podrá insertar, modificar y eliminar medicamentos del sistema, además de poder visualizar las cantidades y los detalles como la fecha de caducidad.
-
-- **HUs asociadas**: [HU1]
+Realizza l'implementazione in grado di leggere il file  in cui si trovano i medicinali acquistati.
+Deliverable: Codice in grado di aprire e leggere il file.
+Vitalità: la vitalità sarà raggiunta quando sarà stato convalidato che il codice può aprire e leggere correttamente il file in cui compaiono i soggetti, superando i test necessari per convalidare l'obiettivo.
   
   
