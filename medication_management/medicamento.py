@@ -16,4 +16,4 @@ class Medicamento:
             raise ValueError("El precio debe ser un valor numérico positivo.")
         if not isinstance(self.unitad, str) or not self.unitad.strip():
             raise ValueError("La unidad debe ser una cadena no vacía.")
-        
+    
