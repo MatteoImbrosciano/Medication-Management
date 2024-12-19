@@ -1,10 +1,13 @@
-from medication_management.medicamento import Medicamento
+# inventario.py
+from dataclasses import dataclass, field
+from typing import List
+from .medicamento import Medicamento
 
+@dataclass
 class Inventario:
-    def __init__(self):
-        self.medicamentos = []
+    medicamentos: List[Medicamento] = field(default_factory=list)
 
-    def agregar_medicamento(self, medicamento):
+    def agregar_medicamento(self, medicamento: Medicamento):
         if not isinstance(medicamento, Medicamento):
             raise TypeError("El objeto debe ser una instancia de la clase Medicamento.")
         for med in self.medicamentos:
@@ -13,7 +16,7 @@ class Inventario:
                 return
         self.medicamentos.append(medicamento)
 
-    def eliminar_medicamento(self, nombre):
+    def eliminar_medicamento(self, nombre: str):
         self.medicamentos = [
             med for med in self.medicamentos if med.nombre != nombre.strip()
         ]
